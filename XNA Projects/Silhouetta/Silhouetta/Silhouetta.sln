@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silhouetta", "Silhouetta\Silhouetta\Silhouetta.csproj", "{2CE090D9-A6B0-47A2-AA28-BC59D9BBBAB4}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "SilhouettaContent", "Silhouetta\SilhouettaContent\SilhouettaContent.contentproj", "{ADB76C05-3305-47F8-B66C-4979044970E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Xbox 360 = Debug|Xbox 360
+		Release|Xbox 360 = Release|Xbox 360
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CE090D9-A6B0-47A2-AA28-BC59D9BBBAB4}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
+		{2CE090D9-A6B0-47A2-AA28-BC59D9BBBAB4}.Debug|Xbox 360.Build.0 = Debug|Xbox 360
+		{2CE090D9-A6B0-47A2-AA28-BC59D9BBBAB4}.Debug|Xbox 360.Deploy.0 = Debug|Xbox 360
+		{2CE090D9-A6B0-47A2-AA28-BC59D9BBBAB4}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
+		{2CE090D9-A6B0-47A2-AA28-BC59D9BBBAB4}.Release|Xbox 360.Build.0 = Release|Xbox 360
+		{2CE090D9-A6B0-47A2-AA28-BC59D9BBBAB4}.Release|Xbox 360.Deploy.0 = Release|Xbox 360
+		{ADB76C05-3305-47F8-B66C-4979044970E9}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
+		{ADB76C05-3305-47F8-B66C-4979044970E9}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

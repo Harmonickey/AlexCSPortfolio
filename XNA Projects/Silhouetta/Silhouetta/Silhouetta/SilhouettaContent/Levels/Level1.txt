@@ -1,0 +1,3 @@
+-193,-94,Block,0,0,Tile
+-293,-94,Block,0,0,Tile
+-93,-94,Block,0,0,Tile

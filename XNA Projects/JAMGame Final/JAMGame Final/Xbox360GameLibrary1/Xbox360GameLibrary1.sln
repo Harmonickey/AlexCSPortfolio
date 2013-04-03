@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C# Express 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xbox360GameLibrary1", "Xbox360GameLibrary1\Xbox360GameLibrary1.csproj", "{AA4F6BD6-4BC2-4B53-842E-D472A133BCDA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Xbox 360 = Debug|Xbox 360
+		Release|Xbox 360 = Release|Xbox 360
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA4F6BD6-4BC2-4B53-842E-D472A133BCDA}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
+		{AA4F6BD6-4BC2-4B53-842E-D472A133BCDA}.Debug|Xbox 360.Build.0 = Debug|Xbox 360
+		{AA4F6BD6-4BC2-4B53-842E-D472A133BCDA}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
+		{AA4F6BD6-4BC2-4B53-842E-D472A133BCDA}.Release|Xbox 360.Build.0 = Release|Xbox 360
+		{4F25CD33-A4A0-455D-B414-F7D8CEB0ACB9}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
+		{4F25CD33-A4A0-455D-B414-F7D8CEB0ACB9}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

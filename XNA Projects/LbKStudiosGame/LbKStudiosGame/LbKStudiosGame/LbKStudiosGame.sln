@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LbKStudiosGame", "LbKStudiosGame\LbKStudiosGame\LbKStudiosGame.csproj", "{4320C426-1924-44CD-8E50-25F9231BFBBD}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "LbKStudiosGameContent", "LbKStudiosGame\LbKStudiosGameContent\LbKStudiosGameContent.contentproj", "{D2EADF72-A474-4D5F-A4C3-BB8C586F1EEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Xbox 360 = Debug|Xbox 360
+		Release|Xbox 360 = Release|Xbox 360
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4320C426-1924-44CD-8E50-25F9231BFBBD}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
+		{4320C426-1924-44CD-8E50-25F9231BFBBD}.Debug|Xbox 360.Build.0 = Debug|Xbox 360
+		{4320C426-1924-44CD-8E50-25F9231BFBBD}.Debug|Xbox 360.Deploy.0 = Debug|Xbox 360
+		{4320C426-1924-44CD-8E50-25F9231BFBBD}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
+		{4320C426-1924-44CD-8E50-25F9231BFBBD}.Release|Xbox 360.Build.0 = Release|Xbox 360
+		{4320C426-1924-44CD-8E50-25F9231BFBBD}.Release|Xbox 360.Deploy.0 = Release|Xbox 360
+		{D2EADF72-A474-4D5F-A4C3-BB8C586F1EEB}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
+		{D2EADF72-A474-4D5F-A4C3-BB8C586F1EEB}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
