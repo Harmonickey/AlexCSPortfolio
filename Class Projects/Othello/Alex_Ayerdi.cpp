@@ -1,57 +1,6 @@
 // Othello.cpp : Defines the entry point for the console application.
 //
-
-#include<iostream>
-#include<sstream>
-#include <exception>
-#include<string>
-#include <cctype>
-#include <vector>
-#include <time.h>
-#include <stdlib.h>
-
-using namespace std;
-
-#define INFINITY 100;
-#define MAX 1
-#define MIN -1
-
-class Alex_Ayerdi {
-	int squares[8][8];
-	int tries;
-	int player;
-
-public:
-	Alex_Ayerdi();
-	string toString();
-	int score();
-	bool full_board();
-	void copyBoard(Alex_Ayerdi * b);
-
-	bool play_square(int, int, int);
-	bool play_square(int&, int&);
-	int get_square(int, int);
-
-	bool move_is_valid(int, int, int);
-	bool has_valid_move(int);
-	bool check_or_flip_path(int, int, int, int, int, bool);
-
-	void increase_tries() {tries++;}
-	void decrease_tries() {tries--;}
-	void reset_tries() {tries = 0;}
-	int get_tries() {return tries;}
-	
-	void setPlayer(int num) {player = num;}
-	int getPlayer() {return player;}
-
-};
-
-int utility(Alex_Ayerdi * b);
-int make_minimax_cpu_move(Alex_Ayerdi * b, int playerval, vector<int> &cell);
-int make_minimax_alphabeta_cpu_move(Alex_Ayerdi * b, int playerval, vector<int> & cell, int alpha, int beta);
-int humanPlay(Alex_Ayerdi * b, int humanPlayer, int & consecutivePasses);
-int computerPlay(Alex_Ayerdi * b, int cpuPlayer, int & consecutivePasses);
-
+#include "Alex_Ayerdi.h"
 
 Alex_Ayerdi::Alex_Ayerdi() {
 	for(int i=0; i<8;i++)
@@ -206,7 +155,12 @@ bool Alex_Ayerdi::play_square(int &row, int &col){
 			//generate move
 			make_minimax_alphabeta_cpu_move(this, player, cell, alphaStart, betaStart);
 			//play move
-			play_square(cell[0], cell[1], player);
+			if (!play_square(cell[0], cell[1], player))
+			{
+				row = -1;
+				col = -1;
+				return false;
+			}
 			
 			//pass to opposing player
 			row = cell[0];
@@ -316,7 +270,7 @@ int make_minimax_alphabeta_cpu_move(Alex_Ayerdi * b, int playerval, vector<int> 
 
 						return MAX;  //return MAX because this is a really good move
 					}
-					//if our alpha max is greater than our current beta then...
+					//if our alpha max is greater or equal to our current beta min then cut off
 					if (alpha >= beta)
 					{
 						
@@ -705,8 +659,8 @@ void play() {
 int main(int argc, char * argv[])
 {
 	//SINGLE PLAYER
-	//play();
-	//return 0;
+	play();
+	return 0;
 
 	//MULTI-PLAYER
 	Alex_Ayerdi * playerOne = new Alex_Ayerdi();
