@@ -194,13 +194,165 @@ int Alex_Ayerdi::get_square(int row, int col) {
 	return squares[row-1][col-1];
 }
 
+int Alex_Ayerdi::eval(int cpuval) { // originally used score, but it led to bad ai
+					// instead we evaluate based maximizing the
+					// difference between computer's available move count
+					// and the player's. Additionally, corners will be
+					// considered as specially beneficial since they cannot ever be
+					// flipped.
+
+	int score = 0; // evaluation score
+
+	// count available moves for computer and player
+	int mc = 0; int mp = 0;
+	for (int i=1; i<9;i++) {
+		for (int j=1; j<9; j++) {
+			if (move_is_valid(i, j, cpuval))
+				mc++;
+			if (move_is_valid(i, j, -1*cpuval))
+				mp++;
+		}
+	}
+
+	// add the difference to score (scaled)
+	score += 20*(mc - mp); // the number is just some scale determined through playing
+	//score += 7*mc;
+
+	/*
+	// additionally, if mp is 0 this is real good so add some more points,
+	// and if mc is 0 this is real bad so subtract more points
+	// because of skipped turns
+
+	if (mp == 0)
+		score += 50;
+	if (mc == 0)
+		score -= 50;
+	*/
+
+	// count corners for computer and player
+	int cc = 0; int cp = 0;
+	if (get_square(1, 1) == cpuval)
+		cc++;
+	else if (get_square(1, 1) == -1*cpuval)
+		cp++;
+
+	if (get_square(1, 8) == cpuval)
+		cc++;
+	else if (get_square(1, 8) == -1*cpuval)
+		cp++;
+
+	if (get_square(8, 1) == cpuval)
+		cc++;
+	else if (get_square(8, 1) == -1*cpuval)
+		cp++;
+
+	if (get_square(8, 8) == cpuval)
+		cc++;
+	else if (get_square(8, 8) == -1*cpuval)
+		cp++;
+
+	// add the difference to score (scaled)
+	score += 200*(cc - cp);
+
+	/*
+	// squares adjacent to corners on edges also useful, but not as much since it could lead to a corner
+	int ac = 0; int ap = 0;
+	if (get_square(1, 2) == cpuval)
+		ac++;
+	else if (get_square(1, 2) == -1*cpuval)
+		ap++;
+	if (get_square(2, 1) == cpuval)
+		ac++;
+	else if (get_square(2, 1) == -1*cpuval)
+		ap++;
+
+	if (get_square(1, 7) == cpuval)
+		ac++;
+	else if (get_square(1, 7) == -1*cpuval)
+		ap++;
+	if (get_square(2, 8) == cpuval)
+		ac++;
+	else if (get_square(2, 8) == -1*cpuval)
+		ap++;
+
+	if (get_square(7, 1) == cpuval)
+		ac++;
+	else if (get_square(7, 1) == -1*cpuval)
+		ap++;
+	if (get_square(8, 2) == cpuval)
+		ac++;
+	else if (get_square(8, 2) == -1*cpuval)
+		ap++;
+
+	if (get_square(7, 8) == cpuval)
+		ac++;
+	else if (get_square(7, 8) == -1*cpuval)
+		ap++;
+	if (get_square(8, 7) == cpuval)
+		ac++;
+	else if (get_square(8, 7) == -1*cpuval)
+		ap++;
+
+	score += 30*(ac - ap);
+
+	// scale so bigger depths are worth more
+	score += 10*depth;
+
+	*/
+
+	// limit the amount of space around our pieces so we don't surround as much (which leads to big gains endgame for opponent)
+	int sc = 0; int sp = 0; // counts for open spaces neighboring a player/comp's pieces
+	for (int i=1; i<9;i++) {
+		for (int j=1; j<9; j++) {
+			if (get_square(i, j) == cpuval) {
+				//add count to sc
+				sc += free_neighbors(i, j);
+			}
+			if (get_square(i, j) == -1*cpuval) {
+				//add count to sp
+				sp += free_neighbors(i, j);
+			}
+		}
+	}
+
+	score -= 10*(sc - sp); // subtract because we are trying to minimize it
+	return score;
+}
+
+int Alex_Ayerdi::free_neighbors(int i, int j) {
+	int count = 0;
+
+	// examine the 8 possible neighborings unless not possible positions
+	if ((i+1)>0 && j>0 && (i+1)<9 && j<9 && get_square(i+1, j) == 0)
+		count++;
+	if ((i+1)>0 && (j-1)>0 && (i+1)<9 && (j-1)<9 && get_square(i+1, j-1) == 0)
+		count++;
+	if (i>0 && (j-1)>0 && i<9 && (j-1)<9 && get_square(i, j-1) == 0)
+		count++;
+	if ((i-1)>0 && (j-1)>0 && (i-1)<9 && (j-1)<9 && get_square(i-1, j-1) == 0)
+		count++;
+	if ((i-1)>0 && j>0 && (i-1)<9 && j<9 && get_square(i-1, j) == 0)
+		count++;
+	if ((i-1)>0 && (j+1)>0 && (i-1)<9 && (j+1)<9 && get_square(i-1, j+1) == 0)
+		count++;
+	if (i>0 && (j+1)>0 && i<9 && (j+1)<9 && get_square(i, j+1) == 0)
+		count++;
+	if ((i+1)>0 && (j+1)>0 && (i+1)<9 && (j+1)<9 && get_square(i+1, j+1) == 0)
+		count++;
+
+	return count;
+
+}
+
 int make_minimax_alphabeta_cpu_move(Alex_Ayerdi * b, int playerval, vector<int> &cell, int alpha, int beta) {
 	
 	//if we have gotten to check to a full board then return the end score
-	if (b->full_board()) return utility(b);
+	if (b->full_board()) return b->eval(playerval);
 
 	int resultMin = INFINITY;
 	int resultMax = -INFINITY;
+	int maxplay = alpha;
+	int minplay = beta;
 
 	//a technical check for if we made a move or not
 	//False: then we never got to make a move (a pass)
@@ -209,7 +361,7 @@ int make_minimax_alphabeta_cpu_move(Alex_Ayerdi * b, int playerval, vector<int> 
 	bool madeMove = false;
 
 	//With a max of 10 plies we can make it under 15 seconds
-	if (b->get_tries() == 10) return utility(b); 
+	if (b->get_tries() == 9000) return b->eval(playerval); 
 
 	//for max player
 	if (playerval == MAX)
@@ -237,19 +389,22 @@ int make_minimax_alphabeta_cpu_move(Alex_Ayerdi * b, int playerval, vector<int> 
 					{
 						//since this was a valid move change this flag
 						madeMove = true;
+						cell.clear();
+						cell.push_back(i);
+						cell.push_back(j);
 					}
 
 					//increase the amount of tries since we made a valid move (down the next ply)
 					b->increase_tries();
 
 					//get the utilty from making that test move
-					resultMax = make_minimax_alphabeta_cpu_move(b, MIN, cell, alpha, beta);
+					resultMax = make_minimax_alphabeta_cpu_move(b, MIN, cell, alpha, minplay);
 					
 					//if our score is greater than the max we've seen...
-					if (resultMax > alpha)
+					if (resultMax >= minplay)
 					{
 						//update the max (alpha)
-						alpha = resultMax;
+						minplay = resultMax;
 
 						//not all moves are valid, only save the ones on the first ply 
 						if (b->get_tries() == 1)
@@ -259,19 +414,9 @@ int make_minimax_alphabeta_cpu_move(Alex_Ayerdi * b, int playerval, vector<int> 
 							cell.push_back(j);
 						}
 					}
-					//if we find that our path leads to a corner piece...
-					if ((i == 1 && j == 1) ||
-						(i == 8 && j == 8) ||
-						(i == 1 && j == 8) ||
-						(i == 8 && j == 1)) 
-					{
-						b->copyBoard(&tempAlex_Ayerdi);
-						b->decrease_tries();
-
-						return MAX;  //return MAX because this is a really good move
-					}
-					//if our alpha max is greater or equal to our current beta min then cut off
-					if (alpha >= beta)
+					
+					//if our alpha max is greater than our current beta then...
+					if (minplay > alpha)
 					{
 						
 						b->copyBoard(&tempAlex_Ayerdi);  //return to initial state
@@ -290,9 +435,9 @@ int make_minimax_alphabeta_cpu_move(Alex_Ayerdi * b, int playerval, vector<int> 
 
 		//if we never made a move then we need to return the score at that point
 		if (madeMove == false) 
-			return utility(b);
+			return b->eval(playerval);
 		
-		return alpha;  //return the utility of the best move we've found
+		return minplay;  //return the utility of the best move we've found
 	}
 	else
 	{
@@ -313,14 +458,17 @@ int make_minimax_alphabeta_cpu_move(Alex_Ayerdi * b, int playerval, vector<int> 
 					else
 					{
 						madeMove = true;
+						cell.clear();
+						cell.push_back(i);
+						cell.push_back(j);
 					}
 					b->increase_tries();
 
-					resultMin = make_minimax_alphabeta_cpu_move(b, MAX, cell, alpha, beta);
+					resultMin = make_minimax_alphabeta_cpu_move(b, MAX, cell, maxplay, beta);
 
-					if (resultMin < beta)
+					if (resultMin <= alpha)
 					{
-						beta = resultMin;
+						alpha = resultMin;
 
 						if (b->get_tries() == 1)
 						{
@@ -330,17 +478,7 @@ int make_minimax_alphabeta_cpu_move(Alex_Ayerdi * b, int playerval, vector<int> 
 						}
 					}
 
-					if ((i == 1 && j == 1) ||
-						(i == 8 && j == 8) ||
-						(i == 1 && j == 8) ||
-						(i == 8 && j == 1)) 
-					{
-						b->copyBoard(&tempAlex_Ayerdi);
-						b->decrease_tries();
-
-						return MIN;  //this is a really good move for the other player
-					}
-					if (alpha >= beta)
+					if (alpha < beta)
 					{
 						b->copyBoard(&tempAlex_Ayerdi);
 						b->decrease_tries();
@@ -356,9 +494,9 @@ int make_minimax_alphabeta_cpu_move(Alex_Ayerdi * b, int playerval, vector<int> 
 		}
 
 		if (madeMove == false)
-			return utility(b);
+			return b->eval(playerval);
 
-		return beta;
+		return maxplay;
 	}
 }
 /*
@@ -656,11 +794,12 @@ void play() {
 	cin.ignore();
 }
 
+/*
 int main(int argc, char * argv[])
 {
 	//SINGLE PLAYER
-	play();
-	return 0;
+	//play();
+	//return 0;
 
 	//MULTI-PLAYER
 	Alex_Ayerdi * playerOne = new Alex_Ayerdi();
@@ -735,3 +874,4 @@ int main(int argc, char * argv[])
 
 	return 0;
 }
+*/

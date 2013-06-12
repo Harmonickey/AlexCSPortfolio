@@ -108,107 +108,19 @@ bool make_simple_cpu_move(Board * b, int cpuval) {
 
 int make_minimax_move_alphabeta(Board * b, int playerval, vector<int> &cell, int alpha, int beta, int depth) {
 
-	int minplay = INFINITY;
-	int maxplay = -INFINITY;
 	int resultMin = INFINITY;
 	int resultMax = -INFINITY;
+	int maxplay = alpha;
+	int minplay = beta;
 
 	if (b->winner() || b->full_board()) 
 	{
 		return utility(b);
 	}
 
-	if (playerval == MAX)  //if the max player, then...
-	{
-		//search among all children
-		for (int i = 1; i <= 3; i++)
-		{
-			for (int j = 1; j <= 3; j++)
-			{
-				//only choose empty squares
-				if (b->get_square(i, j) == 0)
-				{
-					//set a test square
-					b->play_square(i, j, playerval);
-					
-					resultMax = make_minimax_move_alphabeta(b, MIN, cell, alpha, beta, depth + 1);  //play the next move with minplayer
-					
-					//if the utility for that square is greater or the same as beta then prune
-					if (resultMax >= beta)  
-					{
-						b->play_square(i, j, 0);   //reset before moving up the tree
-						return resultMax;  //move that value up the tree
-					}
-					else if (resultMax >= alpha)  //if the value is greater than alpha then we should save that value as the best value so far
-					{
-						alpha = resultMax;  //alpha set to new max
-
-						if (depth == 1)
-						{
-							cell.clear();
-							cell.push_back(i);
-							cell.push_back(j);  //save the best value as a cell choice
-						}
-					}
-					
-					b->play_square(i, j, 0);
-				}
-			}
-		}
-		return alpha;
-	}
-	else  //if the min player, then...
-	{
-		//same idea as max, but from min point of view
-		for (int i = 1; i <= 3; i++)
-		{
-			for (int j = 1; j <= 3; j++)
-			{
-				if (b->get_square(i, j) == 0)
-				{
-					b->play_square(i, j, playerval);
-
-					resultMin = make_minimax_move_alphabeta(b, MAX, cell, alpha, beta, depth + 1);  //play the next move with maxplayer
-
-					if (resultMin <= alpha)
-					{
-						b->play_square(i, j, 0);
-						return resultMin;
-					}
-					else if (resultMin <= beta)
-					{
-						beta = resultMin;
-
-						if (depth == 1)
-						{
-							cell.clear();
-							cell.push_back(i);
-							cell.push_back(j);
-						}
-					}
-
-					b->play_square(i, j, 0);
-				}
-			}
-		}
-		return beta;
-	}
-}
-
-
-int make_minimax_move(Board * b, int playerval, vector<int> &cell) {
-
-	if (b->winner() || b->full_board()) return utility(b);
-
-	int minplay = INFINITY;
-	int maxplay = -INFINITY;
-
-	int resultMin = INFINITY;
-	int resultMax = -INFINITY;
-
 	if (playerval == MAX)
 	{
-		//go among all the children
+		//check among all the children
 		for (int i = 1; i <= 3; i++)
 		{
 			for (int j = 1; j <= 3; j++)
@@ -218,26 +130,40 @@ int make_minimax_move(Board * b, int playerval, vector<int> &cell) {
 				{
 					//play a test square
 					b->play_square(i, j, playerval);
-					
+
 					//get the utilty from making that test move
-					resultMax = make_minimax_move(b, MIN, cell);
-
-					if (resultMax >= maxplay) // save the maximum outcome
+					resultMax = make_minimax_alphabeta_cpu_move(b, MIN, cell, alpha, minplay, depth + 1);
+					
+					//if our score is greater than the max we've seen...
+					if (resultMax >= minplay)
 					{
-						maxplay = resultMax;
-						
-						cell.clear();
-						cell.push_back(i);
-						cell.push_back(j);
+						//update the max (alpha)
+						minplay = resultMax;
 
+						//not all moves are valid, only save the ones on the first ply 
+						if (depth == 1)
+						{
+							cell.clear();
+							cell.push_back(i);
+							cell.push_back(j);
+						}
+					}
+					
+					//if our alpha max is greater than our current beta then...
+					if (minplay > alpha)
+					{
+						
+						b->play_square(i, j, 0);
+						//alpha cutoff (alpha-beta pruning)
+						return alpha;
 					}
 
-					//reset the move so we can try another
-					b->play_square(i, j, 0);
+					b->play_square(i, j, 0);  
 				}
 			}
 		}
-		return maxplay;  //return the best move we found
+		
+		return minplay;  //return the utility of the best move we've found
 	}
 	else
 	{
@@ -248,31 +174,43 @@ int make_minimax_move(Board * b, int playerval, vector<int> &cell) {
 			{
 				if (b->get_square(i, j) == 0)
 				{
+					//play a test square
 					b->play_square(i, j, playerval);
 
-					resultMin = make_minimax_move(b, MAX, cell);
+					resultMin = make_minimax_alphabeta_cpu_move(b, MAX, cell, maxplay, beta, depth + 1);
 
-					if (resultMin <= minplay)  // save the minimum outcome
+					if (resultMin <= alpha)
 					{
-						minplay = resultMin;
-						
-						cell.clear();
-						cell.push_back(i);
-						cell.push_back(j);
-
+						alpha = resultMin;
+					
+						if (depth == 1)
+						{
+							cell.clear();
+							cell.push_back(i);
+							cell.push_back(j);
+						}
+					
 					}
 
+					if (alpha < beta)
+					{
+						b->play_square(i, j, 0);
+
+						//beta cutoff (alpha-beta pruning)
+						return beta;
+					}
+					
 					b->play_square(i, j, 0);
 				}
 			}
 		}
-		return minplay;
+		
+		return maxplay;
 	}
 }
 
 int utility(Board * b)
 {
-
 	if (b->winner() == MAX) //if max player wins, return win utility
 	{ 
 		return MAX;
@@ -311,11 +249,9 @@ void computerMove(Board * b)
 	int negStart = -INFINITY;
 	int posStart = INFINITY;
 	int depth = 1;
-	if (alphabeta)
-		make_minimax_move_alphabeta(b, b->cpuPlayer, cell, negStart, posStart, depth);
-	else
-		make_minimax_move(b, b->cpuPlayer, cell);
-
+	
+	make_minimax_move_alphabeta(b, b->cpuPlayer, cell, negStart, posStart, depth);
+	
 	b->play_square(cell[0], cell[1], b->cpuPlayer);
 
 }
@@ -327,40 +263,9 @@ void play() {
 	{
 		cout << "Player One Human?  1 for yes, 0 for no : ";
 		cin >> answer;
-		cout << "Minimax (0) or Minimax-AlphaBeta (1)? : " << endl;
-		cin >> alphabeta;
 	} while (answer != 1 && answer != 0);
 	
 	Board * b = new Board(answer ? true : false);
-
-
-	/*******  ALPHA BETA TESTING  ********/
-
-	/*** TEST PLAY ONE : CPU PLAYER GOES FIRST ***/
-	/*   Works as expected
-	b->play_square(1, 1, b->cpuPlayer);
-	b->play_square(1, 3, b->cpuPlayer);
-	b->play_square(3, 2, b->cpuPlayer);
-	b->play_square(1, 2, b->humanPlayer);
-	b->play_square(2, 1, b->humanPlayer);
-	b->play_square(2, 2, b->humanPlayer);
-	*/
-
-	/*** TEST PLAY TWO : CPU PLAYER GOES FIRST ***/
-	/*  Works as expected
-	b->play_square(1, 1, b->cpuPlayer);
-	b->play_square(1, 3, b->cpuPlayer);
-	b->play_square(1, 2, b->humanPlayer);
-	b->play_square(3, 3, b->humanPlayer);
-	*/
-
-	/*** TEST PLAY THREE : PLAYER GOES FIRST ***/
-	/*  Works as expected
-	b->play_square(1, 1, b->humanPlayer);
-	b->play_square(1, 3, b->humanPlayer);
-	b->play_square(1, 2, b->cpuPlayer);
-	b->play_square(3, 3, b->cpuPlayer);
-	*/
 
 	cout << b->toString();
 	//depending on if you chose to be player one, then isPlayerMore will change to true or false

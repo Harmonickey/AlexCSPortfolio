@@ -44,6 +44,9 @@ public:
 	void setPlayer(int num) {player = num;}
 	int getPlayer() {return player;}
 
+	int eval(int cpuval);
+	int free_neighbors(int i, int j);
+
 };
 
 int utility(Alex_Ayerdi * b);
