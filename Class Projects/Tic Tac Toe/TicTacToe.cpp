@@ -132,7 +132,7 @@ int make_minimax_move_alphabeta(Board * b, int playerval, vector<int> &cell, int
 					b->play_square(i, j, playerval);
 
 					//get the utilty from making that test move
-					resultMax = make_minimax_alphabeta_cpu_move(b, MIN, cell, alpha, minplay, depth + 1);
+					resultMax = make_minimax_move_alphabeta(b, MIN, cell, alpha, minplay, depth + 1);
 					
 					//if our score is greater than the max we've seen...
 					if (resultMax >= minplay)
@@ -177,7 +177,7 @@ int make_minimax_move_alphabeta(Board * b, int playerval, vector<int> &cell, int
 					//play a test square
 					b->play_square(i, j, playerval);
 
-					resultMin = make_minimax_alphabeta_cpu_move(b, MAX, cell, maxplay, beta, depth + 1);
+					resultMin = make_minimax_move_alphabeta(b, MAX, cell, maxplay, beta, depth + 1);
 
 					if (resultMin <= alpha)
 					{
