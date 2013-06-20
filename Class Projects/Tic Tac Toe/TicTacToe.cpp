@@ -132,13 +132,13 @@ int make_minimax_move_alphabeta(Board * b, int playerval, vector<int> &cell, int
 					b->play_square(i, j, playerval);
 
 					//get the utilty from making that test move
-					resultMax = make_minimax_move_alphabeta(b, MIN, cell, alpha, minplay, depth + 1);
+					resultMax = make_minimax_move_alphabeta(b, MIN, cell, alpha, beta, depth + 1);
 					
 					//if our score is greater than the max we've seen...
-					if (resultMax >= minplay)
+					if (resultMax >= maxplay)
 					{
 						//update the max (alpha)
-						minplay = resultMax;
+						maxplay = resultMax;
 
 						//not all moves are valid, only save the ones on the first ply 
 						if (depth == 1)
@@ -150,7 +150,7 @@ int make_minimax_move_alphabeta(Board * b, int playerval, vector<int> &cell, int
 					}
 					
 					//if our alpha max is greater than our current beta then...
-					if (minplay > alpha)
+					if (alpha > beta)
 					{
 						
 						b->play_square(i, j, 0);
@@ -163,7 +163,7 @@ int make_minimax_move_alphabeta(Board * b, int playerval, vector<int> &cell, int
 			}
 		}
 		
-		return minplay;  //return the utility of the best move we've found
+		return maxplay;  //return the utility of the best move we've found
 	}
 	else
 	{
@@ -177,11 +177,11 @@ int make_minimax_move_alphabeta(Board * b, int playerval, vector<int> &cell, int
 					//play a test square
 					b->play_square(i, j, playerval);
 
-					resultMin = make_minimax_move_alphabeta(b, MAX, cell, maxplay, beta, depth + 1);
+					resultMin = make_minimax_move_alphabeta(b, MAX, cell, alpha, beta, depth + 1);
 
-					if (resultMin <= alpha)
+					if (resultMin <= minplay)
 					{
-						alpha = resultMin;
+						minplay = resultMin;
 					
 						if (depth == 1)
 						{
@@ -192,7 +192,7 @@ int make_minimax_move_alphabeta(Board * b, int playerval, vector<int> &cell, int
 					
 					}
 
-					if (alpha < beta)
+					if (alpha > beta)
 					{
 						b->play_square(i, j, 0);
 
@@ -205,7 +205,7 @@ int make_minimax_move_alphabeta(Board * b, int playerval, vector<int> &cell, int
 			}
 		}
 		
-		return maxplay;
+		return minplay;
 	}
 }
 
