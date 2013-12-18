@@ -1,0 +1,153 @@
+rm -f *.o *~
+rm -f tsh ama610-pfw495-pzu918-`date +%Y%m%d%H%M%S`-tsh.tar.gz
+echo test-reg-redir > test_type
+tar cvf ama610-pfw495-pzu918-`date +%Y%m%d%H%M%S`-tsh.tar Makefile *.h *.c *.1 test_type
+Makefile
+config.h
+interpreter.h
+io.h
+runtime.h
+tsh.h
+interpreter.c
+io.c
+runtime.c
+tsh.c
+tsh.1
+test_type
+gzip ama610-pfw495-pzu918-`date +%Y%m%d%H%M%S`-tsh.tar
+HANDIN=`pwd`/ama610-pfw495-pzu918-`date +%Y%m%d%H%M%S`-tsh.tar.gz;\
+	cd testsuite;\
+	bash ./run_testcase_redir.sh ${HANDIN};
+Testing /home/aqualab/Desktop/eecs343/ama610-pfw495-pzu918-20131009184035-tsh.tar.gz
+
+UNTAR
+Makefile
+config.h
+interpreter.h
+io.h
+runtime.h
+tsh.h
+interpreter.c
+io.c
+runtime.c
+tsh.c
+tsh.1
+test_type
+
+COMPILE
+compile /tmp/cs343.tests.YPP7rv/interpreter.c
+compile /tmp/cs343.tests.YPP7rv/io.c
+compile /tmp/cs343.tests.YPP7rv/runtime.c
+compile /tmp/cs343.tests.YPP7rv/tsh.c
+LINKING
+0 warning(s) found while compiling
+0 error(s) found while compiling
+
+RUN BASIC TEST CASES
+test33: PASS
+test34: PASS
+test01: PASS
+test02: PASS
+test03: PASS
+test04: PASS
+test05: PASS
+test06: PASS
+test07: PASS
+test08: PASS
+test09: PASS
+test10: PASS
+test11: PASS
+test12: PASS
+test13: PASS
+test14: PASS
+test15: PASS
+test16: PASS
+test17: PASS
+test18: PASS
+test24: PASS
+test25: PASS
+test31: PASS
+test32: PASS
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+24 basic test cases passed
+
+RUN EXTRA CREDIT TEST CASES
+test26: PASS
+test27: FAILED
+Input:
+alias showdir='echo ls'
+showdir
+unalias showdir
+showdir
+exit
+-- HOW IT SHOULD BE ------------------------------------------------------------ YOUR PROGRAM --------------------------------------------------------------
+ls										ls
+/bin/bash: line 6: showdir: command not found				      |	showdir: command not found
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+test29: PASS
+test21: FAILED
+Input:
+ls -l | wc
+cat test.20 | wc
+exit
+-- HOW IT SHOULD BE ------------------------------------------------------------ YOUR PROGRAM --------------------------------------------------------------
+     30     263    1698							      <
+      3       8      43							      <
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+test22: FAILED
+Input:
+ls -l test.3 test.4 test.5 test.23 | wc -w
+grep test longlist.txt
+cat longlist.txt
+grep 3 longlist.txt | wc -w | cat | wc
+exit
+-- HOW IT SHOULD BE ------------------------------------------------------------ YOUR PROGRAM --------------------------------------------------------------
+36									      <
+-rw-rw-r-- 1 aqualab aqualab 24 Oct  9 18:40 test.23				-rw-rw-r-- 1 aqualab aqualab 24 Oct  9 18:40 test.23
+-rw-rw-r-- 1 aqualab aqualab 23 Oct  9 18:40 test.3				-rw-rw-r-- 1 aqualab aqualab 23 Oct  9 18:40 test.3
+-rw-rw-r-- 1 aqualab aqualab 39 Oct  9 18:40 test.4				-rw-rw-r-- 1 aqualab aqualab 39 Oct  9 18:40 test.4
+-rw-rw-r-- 1 aqualab aqualab 47 Oct  9 18:40 test.5				-rw-rw-r-- 1 aqualab aqualab 47 Oct  9 18:40 test.5
+-rw-rw-r-- 1 aqualab aqualab 24 Oct  9 18:40 test.23				-rw-rw-r-- 1 aqualab aqualab 24 Oct  9 18:40 test.23
+-rw-rw-r-- 1 aqualab aqualab 23 Oct  9 18:40 test.3				-rw-rw-r-- 1 aqualab aqualab 23 Oct  9 18:40 test.3
+-rw-rw-r-- 1 aqualab aqualab 39 Oct  9 18:40 test.4				-rw-rw-r-- 1 aqualab aqualab 39 Oct  9 18:40 test.4
+-rw-rw-r-- 1 aqualab aqualab 47 Oct  9 18:40 test.5				-rw-rw-r-- 1 aqualab aqualab 47 Oct  9 18:40 test.5
+      1       1       3							      <
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+test23: FAILED
+Input:
+ls -l | grep test
+ls -l | grep test | grep 2
+ls -l | grep test | grep 2 | wc
+exit
+-- HOW IT SHOULD BE ------------------------------------------------------------ YOUR PROGRAM --------------------------------------------------------------
+-rw-r--r-- 1 aqualab aqualab    24 Oct  9 18:43 cur.dir.test.txt	      <
+-rw-r--r-- 1 aqualab aqualab  1912 Oct  9 18:43 dir.test.txt		      <
+-rw-r--r-- 1 aqualab aqualab   150 Oct  9 18:43 file1.test.txt		      <
+-rw-r--r-- 1 aqualab aqualab    12 Oct  9 18:43 file2.test.txt		      <
+-rw-r--r-- 1 aqualab aqualab     9 Oct  9 18:43 file.test.txt		      <
+-rw-rw-r-- 1 aqualab aqualab    32 Oct  9 18:40 test1.txt		      <
+-rw-rw-r-- 1 aqualab aqualab    43 Oct  9 18:40 test.20			      <
+-rw-rw-r-- 1 aqualab aqualab    25 Oct  9 18:40 test.200		      <
+-rw-rw-r-- 1 aqualab aqualab    24 Oct  9 18:40 test.23			      <
+-rw-rw-r-- 1 aqualab aqualab    23 Oct  9 18:40 test.3			      <
+-rw-rw-r-- 1 aqualab aqualab    39 Oct  9 18:40 test.4			      <
+-rw-rw-r-- 1 aqualab aqualab    47 Oct  9 18:40 test.5			      <
+-rw-r--r-- 1 aqualab aqualab    24 Oct  9 18:43 cur.dir.test.txt	      <
+-rw-r--r-- 1 aqualab aqualab  1912 Oct  9 18:43 dir.test.txt		      <
+-rw-r--r-- 1 aqualab aqualab    12 Oct  9 18:43 file2.test.txt		      <
+-rw-rw-r-- 1 aqualab aqualab    32 Oct  9 18:40 test1.txt		      <
+-rw-rw-r-- 1 aqualab aqualab    43 Oct  9 18:40 test.20			      <
+-rw-rw-r-- 1 aqualab aqualab    25 Oct  9 18:40 test.200		      <
+-rw-rw-r-- 1 aqualab aqualab    24 Oct  9 18:40 test.23			      <
+-rw-rw-r-- 1 aqualab aqualab    23 Oct  9 18:40 test.3			      <
+      8      72     471							      <
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+2 extra credit test cases passed
+
+CHECK FOR MEMORY LEAKS
+0 possible leaks
+0 leaks
+0 still reachable

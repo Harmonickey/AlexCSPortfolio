@@ -1,0 +1,60 @@
+TSH(1)                     User Manuals                    TSH(1)
+
+
+
+NAME
+     tsh - our awesome shell program
+
+SYNOPSIS
+     tsh
+
+DESCRIPTION
+     This emulates the bash shell.  Some bashism are implemented and it runs all the rest of the external commands, excluding the visual editors.  The bashisms include fg, bg, jobs, alias, and unalias.  Redirection is also supported.     
+
+DESIGN DECISION
+     We used a linked list to keep track of the processes, child and otherwise.  We also implemented addtojobs and delfromjobs to add and remove processes from the job list.  
+     We used a similarly linked list to keep track of aliases in the same way that jobs are kept track of.  
+     We have a waitfg function that waits for the foreground job to terminate. We reaped the child in the sigchld_handler funciton in tsh.c.
+     We implemented a single function to handle redirection.
+     In order to implement the CheckJobs function for processes that are finished, we added done-jobs to a separate linked list and then when CheckJobs is finaly called when you type a command or hit enter, then it prints out all the done-jobs and refreshes the list.
+     We passed the alias extra credit tests, except for test27.in which had an error output from bash, but we assume our shell has worked as needed.
+
+COMMANDS
+     jobs - lists all the current jobs in the process queue
+
+     bg [job_id] - starts a process that's currently in the background, from a Stopped state to a Running state.  Without an argument, it takes the most recent job.
+
+     fg [job_id] - brings the selected process into the foreground and changes the state from Stopped to Running (if already Stopped).  Without an argument, it takes the most recent job.
+
+     alias [new_alias] - creates an alias to run from the format 
+                         -> alias la='ls -a'    In addition, calling without any arguments lists all the currently created aliases.
+
+     unalias <alias name> - removes the specified alias
+ 
+     > - redirects standard out to the right hand side
+
+     < - redirects standard in from the right hand side into the left hand side
+
+     Any External Command - any external command may be run provided that it's found in the PATH environment variable.
+
+FILES
+    tsh - the shell
+    tsh.c, tsh.h - the source for the shell
+    runtime.c, runtime.h - the runtime provider for the shell
+    interpreter.c, interpreter.h - the command interpreter for the shell
+    io.c, io.h - handles I/O processes for the shell
+    tsh.1 - the man file for the shell    
+
+BUGS     
+    Our program is perfect, so.....
+
+AUTHOR
+     Alex Ayerdi <Aayerdi@u.northwestern.edu> ama610
+     Daniel (Peng) Zuo <danielzuo@u.northwestern.edu> pzu918
+     Patrick Weston <pfw@u.northwestern.edu> pfw495
+
+SEE ALSO
+     bash
+
+Linux                Last change: OCTOBER 2013                   1 
+

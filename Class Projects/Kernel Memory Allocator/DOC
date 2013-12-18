@@ -1,0 +1,67 @@
+IMPLEMENTATION OF DIAGNOSITCS:
+In order to create our diagnostic report we added to a global variable all the total overhead value when creating a page, then the total size used with block allocation (including the block header size).  The total requested is simply a global variable that's gets accumulated by the size parameter from kma_malloc.
+In order to get the time values we created a timestamp_t get_timestamp function that basically worked like using clock().  We set a timestamp at the beginning and end of allocation and freeing respectively and printed out what the running average and max was so we knew what it would be at the end. Displayed below are the values in 'seconds.'  
+
+DESIGN DECISIONS:
+KMA_RM: 
+    We included a coalesce function to help with kma_free.  This decreased the amount of pages used on average.  For example, 5.trace used 9410 pages without coalesce and 8625 with coalesce.  Space was massively conserved and speed was generally the same.  
+KMA_BUD:
+    We included the free list implementation to allow for faster searching of free blocks that satisfy size within the pages.  This worked well with buddy system since we were splitting up blocks in an orderly fashion where they could be ordered into these separate lists.  We also implemented that free list as a doubly linked list so that insertion and removal was O(1).
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+KMA_RM: Diagnostic Report
+1.trace
+Total Requested: 21206 
+Total Satisfied: 22885
+2.trace
+Total Requested: 637930 
+Total Satisfied: 655799
+3.trace
+Total Requested: 11781190
+Total Satisfied: 11971405
+4.trace
+Total Requested: 20069699
+Total Satisfied: 20255530
+5.trace
+Total Requested: 114818834
+Total Satisfied: 116794951
+Average Ratios:
+Requested/Satisfied: 98.42% Utilization -> 1.78% due to overhead
+
+Timer Values (sec):
+ALLOC: AVG: 0.000039  WORST: 0.007560
+FREE:  AVG: 0.000004  WORST: 0.002505
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+KMA_BUD: Diagnostic Report
+1.trace
+Total Requested: 21206
+Total Satisfied: 38736
+2.trace
+Total Requested: 637930
+Total Satisfied: 912736
+3.trace
+Total Requested: 11781190
+Total Satisfied: 16434992
+4.trace
+Total Requested: 20069699
+Total Satisfied: 27114896
+5.trace
+Total Requested: 114818834
+Total Satisfied: 160451536
+Average Ratios:
+Requested/Satisfied: 71.88% Utilization -> 28.12% due to overhead
+
+Timer Values:
+ALLOC: AVG: 0.000000336  WORST: 0.0009344
+FREE:  AVG: 0.0000001    WORST: 0.0003012
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+FINAL JUSTIFICATION FOR TIMER VALUES (w/ respect to rm and bud)
+    The reason we see allocation happening faster in buddy is because the design allows for a faster finding of a free block location for the requested size.  Buddy splits up the blocks in half each time until adequate space is found, thus allowing for faster insertion for the next block since the blocks will be organized in free lists.  Basically, implemented a version of best fit.
+    The reason we are also freeing faster in buddy is because the design allows for faster coalesce of a free block section that needs to be freed up.  Once a block is freed, the neighbor is combined and the space is doubled.  Therefore, the time to coalesce the whole page would be O(logn) time where in resource map, the time to coalesce is O(n).
+
+FINAL JUSTIFICATION FOR UTILITZATION VALUES (w/ respect to km and bud)
+    The reason we are utilizing better in resource map is because of the coalesce function and also because of the way we just use the smallest amount of resources possible to insert the memory block.  There is barely any overhead because we aren't splitting up the blocks into separate sections necessarily like buddy.  
