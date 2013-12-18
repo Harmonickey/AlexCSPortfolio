@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+* {
+	margin:  0px;
+	padding: 0px;
+	font-family: Arial, Calibri, Myriad Pro;
+}
+
+a {
+	text-decoration:none;
+}
+
+body {
+	width: 100%;
+	background: black;
+}
+
+#content {
+	width: 1024px;
+	height: 1280px;
+	float: none;
+	margin: 75px auto 20px auto;
+	color: white;
+	font-family: Myriad Pro;	
+}
+
+#nav {
+	margin-left: 75px;
+}
+
+#nav li {
+	width: 176px;
+	height: 66px;
+}
+
+#nav > ul {
+	width:880px;
+	height: 66px;
+}
+
+#nav ul {
+	list-style:none;	
+}
+
+#nav ul li ul {
+	height: 66;	
+}
+
+#technoweek {
+	background: url(assets/Navigation%20Bar%20SpriteSheet%20ALL.png) -176px -0px no-repeat;
+}
+
+#technoweek_revert {
+	background: url(assets/Navigation%20Bar%20SpriteSheet%20ALL.png) -176px -0px no-repeat;
+}
+
+#technoweek:hover {
+	background: url(assets/Navigation%20Bar%20SpriteSheet%20ALL.png) -176px -66px no-repeat;
+}
+
+#delmar {
+	background: url(assets/Navigation%20Bar%20SpriteSheet%20ALL.png) -1936px -0px no-repeat;
+}
+
+#delmar:hover {
+	background: url(assets/Navigation%20Bar%20SpriteSheet%20ALL.png) -1936px -66px no-repeat;
+}
+		
+#delmarBlog {
+	background: url(assets/Navigation%20Bar%20SpriteSheet%20ALL.png) -1232px -0px no-repeat;
+}
+
+#delmarBlog:hover {
+	background: url(assets/Navigation%20Bar%20SpriteSheet%20ALL.png) -1232px -66px no-repeat;	
+}
+
+#chat {
+	background: url(assets/Navigation%20Bar%20SpriteSheet%20ALL.png) -2640px -0px no-repeat;
+}
+
+#chat_revert {
+	background: url(assets/Navigation%20Bar%20SpriteSheet%20ALL.png) -2640px -0px no-repeat;
+}
+
+#chat:hover {
+	background: url(assets/Navigation%20Bar%20SpriteSheet%20ALL.png) -2640px -66px no-repeat;	
+}
+
+#games {
+	background: url(assets/Navigation%20Bar%20SpriteSheet%20ALL.png) -2288px -0px no-repeat;	
+}
+
+#games:hover {
+	background: url(assets/Navigation%20Bar%20SpriteSheet%20ALL.png) -2288px -66px no-repeat;	
+}
+
+#downloads {
+	background: url(assets/Navigation%20Bar%20SpriteSheet%20ALL.png) -2992px -0px no-repeat;
+}
+
+#downloads:hover {
+	background: url(assets/Navigation%20Bar%20SpriteSheet%20ALL.png) -2992px -66px no-repeat;
+}
+
+#details {
+	background: url(assets/Navigation%20Bar%20SpriteSheet%20ALL.png) -1408px -0px no-repeat;
+}
+
+#details:hover {
+	background: url(assets/Navigation%20Bar%20SpriteSheet%20ALL.png) -1408px -66px no-repeat;	
+}
+
+#about_us {
+	background: url(assets/Navigation%20Bar%20SpriteSheet%20ALL.png) -704px -0px no-repeat;
+}
+
+#about_us:hover {
+	background: url(assets/Navigation%20Bar%20SpriteSheet%20ALL.png) -704px -66px no-repeat;	
+}
+
+#ideas {
+	background: url(assets/Navigation%20Bar%20SpriteSheet%20ALL.png) -1760px -0px no-repeat;
+}
+
+#ideas:hover {
+	background: url(assets/Navigation%20Bar%20SpriteSheet%20ALL.png) -1760px -66px no-repeat;
+}
+
+#nav li ul {
+	display: none;
+	width: auto;
+}
+
+#nav ul li {
+	float: left;	
+}
+
+#nav ul li a {
+	width: 176px;
+	height:66px;
+	float: left;	
+}
+
+#nav .sub_list {
+	position: relative;
+	top: auto;
+	z-index: 11;
+}
+
+#nav li:hover ul {
+	display: block;
+}
+
+#Main_Frame {
+	position: relative;
+	z-index: 5;
+	float: left;
+}
+
+#content_container {
+	position: absolute;
+	top: 265px;
+	left: 330px;
+	width: 600px;
+}
+
+#welcome_message {
+	color: white;
+	font-family: Myriad Pro;	
+}
+
+#left_column {
+	position: absolute;
+	top: 230px;
+	left: 65px;
+}
+
+#preload {
+	display: none;
+	position: absolute;	
+}

@@ -1,0 +1,251 @@
+@charset "utf-8";
+/* CSS Document */
+/* http://css3gen.com/box-shadow/  for shading*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	font: 12pt "Junction", Arial, Helvetica, sans-serif;
+	height: 100%;
+}
+
+#header {
+	height: 166px;
+	width: 100%;
+	background-color: white;	
+}
+
+#header p {
+	font: 40pt "Junction", Arial, Helvetica, sans-serif;
+	text-align: center;	
+}
+
+#nav {
+	width: 100%;
+	height: 37px;
+	background-color: white;
+}
+
+#nav ul {
+	list-style: none;
+	position: relative;
+	display: table;
+	margin: 0 auto;
+}
+
+#nav ul li {
+	border: 3px solid;
+	border-color: white;
+	position: relative;
+	float: left;
+	width: auto;
+	
+}
+
+#nav ul li:hover {
+	border-color: #2D96FF;	
+}
+
+#nav a {
+	padding: .3em 3.085em;
+	text-align: center;
+	text-decoration: none;
+	/*color: #fff;*/
+	display: block;
+	background: none;
+}
+
+#main {
+	min-height: 1024px;
+	width: 100%;
+	background-color: white;
+	
+}
+
+#middle {
+	float: left;
+	width: 461px;	
+	margin: 20px;
+	position: relative;
+}
+
+.left {
+	float: left;
+	height: 600px;
+	width: 160px;
+	margin: 20px;
+}
+
+td {
+	padding: 20px;
+	margin: 1px;
+	background-color: white;	
+}
+
+.entry p {
+	background-color: white;
+}
+
+.showmore {
+	text-align: center;
+	color: blue;
+	cursor: pointer;
+}
+
+.showmorepost {
+	display: none;
+	text-align: left;
+	color: blue;
+	font-size: 12px;
+	cursor: pointer;	
+}
+
+.mediatype {
+	display: block;
+	float: left;
+	height: auto;
+	color: black;
+	width: 15%;
+	
+}
+
+.mediatype p {
+	font-size: 14px;
+	color: black;
+}
+
+.title {
+	display: block;
+	float: left;
+	margin-left: 10px;
+	color: black;
+	height: 30px;
+	width: 60%;
+}
+
+.title > p {
+	font-size: 20px;
+	color: black;
+}
+
+.date {
+	float: left;
+	clear: both;
+	display: inline-block;
+	margin-top: 10px;
+	width: auto;
+}
+
+.date p {
+	font-size: 12px;
+	color: black;
+}
+
+.report {
+	float: left;
+	display: inline-block;
+	margin: 10px 0px 0px 10px;
+	width: auto;
+}
+
+.report p {
+	font-size: 14px;
+	color: black;	
+}
+
+.button {
+	display: block;
+	float: left;
+	height: 50px;
+	width: 20%;
+	margin-left: 10px;
+}
+
+.post {
+	display: block;
+	float: left;	
+	height: 98px;
+	width: 95%;
+	clear: both;
+	color: black;
+	margin-top: 10px;
+	overflow: hidden;
+}
+
+.post p {
+	font-size: 14px;
+	color: black;
+}
+
+.info {
+	height: auto;
+	overflow: hidden;	
+}
+
+.spoilerexpand {
+	margin-top: 2px;
+	display: inline-block;
+	background-image: url(Images/spoileropen.png);
+	height: 25px;
+	width: 200px; 
+	cursor: pointer;
+	float: left;
+	clear: both;
+	
+}
+
+.spoiler {
+	margin-top: 2px;
+	display: none;
+	clear: both;
+}
+
+.search {
+	float: left;
+	margin: 20px 40px 0px 20px;
+	height: 30px;
+	width: 160px;	
+	background-color: white;
+	color: black;
+}
+
+.right {
+	float: left;
+	height: 600px;
+	width: 160px:
+	margin: 20px;
+	/*background-color: orange;*/
+}
+
+#footer {
+	height: 50px;
+	width: 100%;
+	display: block;
+}
+
+#footer p {
+	background-color: white;
+	width: 950px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#container {
+	width: 950px;
+	margin: 0 auto;
+	min-height: 1024px;
+	/* background color for the main content area */
+	background-color: #BEEB00;
+	/* this shadow is borrowed code */
+	-moz-box-shadow: 0px 10px 50px #000;
+	-webkit-box-shadow: 0px 10px 50px #000;
+	box-shadow: 0px 10px 50px #000;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+	display: block;
+}

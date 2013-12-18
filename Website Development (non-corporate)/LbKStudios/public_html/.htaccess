@@ -1,0 +1,18 @@
+# -FrontPage-
+
+
+<Limit GET POST>
+order deny,allow
+deny from all
+allow from all
+</Limit>
+<Limit PUT DELETE>
+order deny,allow
+deny from all
+</Limit>
+AuthUserFile /home6/lbkstudi/public_html/_vti_pvt/service.pwd
+AuthGroupFile /home6/lbkstudi/public_html/_vti_pvt/service.grp
+# Use PHP5 Single php.ini as default
+AddHandler application/x-httpd-php5s .php
+AuthName lbkstudios.net
+IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
