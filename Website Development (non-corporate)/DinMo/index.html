@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DinMo</title>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="okane.js"></script>
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="okane.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="header" style="height: 60px;">
+			<h3 id="fuckthisthing">DinMo</h3>
+		</div>
+
+		<div id="suggestion" class="jumbotron" style="width: 100%;">
+            <h2 id="greeting">Create a Date Night With a Restaurant Dinner and a Movie</h2>
+            <h2 id="extra">You Can Try Any Zip Code!</h2> 
+			<input type="text" id="zip" placeholder="Enter Your Zip Code(#####)" maxlength="5">
+			<input type="button" onclick="getEverything();" value="Search" id="search">
+			<h2 hidden>We suggest<h2>
+			<h2 hidden><b><span id="dinner"></span></b></h2>
+			<h2 hidden>paired with</h2>
+			<h2 hidden><b><span id="movie"></span></b></h2>
+            <h4 hidden> Click on any link to find out more! </h4>
+		</div>
+
+		<div id="leftTitle" style="width: 50%; float: left; height: 100px;" hidden>
+			<h2> Top Restaurants in Your Area </h2>
+		</div>
+		<div id="rightTitle" style="width: 50%; float: right; height: 100px;" hidden>
+			<h2> Top Playing Movies in Theaters </h2>
+		</div>
+
+		<div id="leftText" style="float: left; width: 50%; margin-top: 30px;" hidden>
+			<table style="width: 100%;">
+
+				<thead>
+					<tr>
+						<th> # </th><th style="text-align:center"> Name </th><th> Rating </th>
+					</tr>
+				</thead>
+				<tbody id="body_result">
+				</tbody>
+            
+			</table>
+		</div>
+      
+		<div id="rightText" style="float: right; width: 50%; margin-top: 30px;" hidden>
+			<table style="width: 100%;">
+
+				<thead>
+					<tr>
+						<th> # </th><th style="text-align:center"> Name </th><th> Rating </th>
+					</tr>
+				</thead>
+				<tbody id="body_result2">
+				</tbody>
+			</table>
+		</div>
+    </div>
+</body>
+</html>
