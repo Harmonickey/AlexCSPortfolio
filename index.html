@@ -29,26 +29,60 @@
     <div class="container">
       <section id="main_content">
         <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<a name="check-out-some-of-my-most-prominent-non-corporate-projects-below" class="anchor" href="#check-out-some-of-my-most-prominent-non-corporate-projects-below"><span class="octicon octicon-link"></span></a>Check out some of my most prominent (non-corporate) projects below.</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>My projects below are organized by subject matter or extra curricular.</p>
 
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a name="computer-science-research" class="anchor" href="#computer-science-research"><span class="octicon octicon-link"></span></a>Computer Science Research</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>This includes some of my favorite computer science research.  I worked with the Astronomy Department at Northwestern University during my Freshman year during the summer.  I worked on the LALInference project, which was a gravitational wave estimation algorithm.  They needed the algorithm to perform at much faster speeds because they were waiting unreasonable amounts of time just to get the results from the data input.  Therefore, my project consisted of researching methods and implementing a way to speed up the processing.  I came up with a GPU Optimization algorithm that used CUDA 4.0.  I wrapped their main mathematical code and added a good amount of my own to run the optimization.  My implementation decreased their processing time by 40%.  I even added a separate optimization to another bottleneck but with OpenMP, which increased the percentage to 45%.  The code and research paper is below.
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/CS%20Research">GPU Optimization Research</a></p>
 
 <h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<a name="class-projects" class="anchor" href="#class-projects"><span class="octicon octicon-link"></span></a>Class Projects</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>This is a list of my favorite and most challenging projects from my time at Northwestern.  They are not listed in any particular order.</p>
+
+<p><em><strong>B+Tree</strong></em>
+This project was to create a B+Tree in C++ in order to implement a database that stores key/value pairs.  The class was Intro to Databases.
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/Class%20Projects/B%2Btree">B+Tree Code</a></p>
+
+<p><strong><em>Kernel Memory Allocator</em></strong>
+This project was to create an operating system kernel memory allocator in C++.  It worked in the UNIX system and was a project for the Operating Systems course.
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/Class%20Projects/Kernel%20Memory%20Allocator">Kernel Memory Allocator Code</a></p>
+
+<p><strong><em>Multithreaded Server</em></strong>
+This project was for the Operating Systems course, and it was to create a small server that supported multithreading in C++ so that we could implement an airplane reservation system.
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/Class%20Projects/Multithreaded%20Server">Multithreaded Server Code</a></p>
+
+<p><strong><em>Othello</em></strong>
+This was a really fun project in the Intro to AI course.  I had to create an Othello computer player that would (ideally) never lose.  We implemented Alpha/Beta pruning, Backtracking, Forward Checking, and some other algorithmic techniques.  We had the option to create it in Python or C++, and I chose to implement it in C++.  This was the third large project in the class, with the first one being Tic-Tac-Toe and the second being Sudoku.
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/Class%20Projects/Othello">Othello Code</a></p>
+
+<p><strong><em>TicTacToe</em></strong>
+This was the first project in the Intro to AI course, and we implemented Backtracking and Forward Checking, which was enough to get the program to win or tie every time since the sample size wasn't too big (like Othello).  This was very fun to implement and was done in C++.
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/Class%20Projects/Tic%20Tac%20Toe">TicTacToe Code</a></p>
+
+<p><strong><em>"Red-White-Blue" Political Database</em></strong>
+This was a really cool web project which focused on the use of the SQL database.  We used SQLite3 (SQL), Javascript, Perl, and HTML to implement the project.  The goal was to aggregate certain political parties and show their statistics on a google map.  There were other small objectives such as creating a reliable and secure login methodology for the user which used the SQL database.  This was the first project in the Intro to Database Course.
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/Class%20Projects/SQL%20with%20Perl">Red White Blue, Political Database Code</a></p>
+
+<p><strong><em>Sudoku Solver</em></strong>
+This was the second main Intro to AI project.  Here we had to program a sudoku solver in C++ which could take in 9x9 to 25x25 boards and solve any of them within seconds.  We used Alpha Beta Pruning, Backtracking, and Forward Checking.  One of my favorite projects to implement.
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/Class%20Projects/Sudoku%20Solver">Sudoku Solver Code</a></p>
+
+<p><strong><em>TCP Analysis Research</em></strong>
+This was a really fun project in the Problems with Cloud Computing class.  We learned all about how the cloud works by reading and debating research papers.  We learned about tons of different techniques and methods to implementing cloud networks.  One of our main projects was to create a research proposal from one of the 8 problems described on the first day.  I chose to work with TCP Analysis.  We analyzed TCP connections for Ethernet, WiFi, Moving WiFi, Cellular Data Connections, and moving Cellular Data Connections.  We focused in the problem with why Cell Data is so much slower and drops connections more than WiFi.  Essentially, cell towers are just not up to date with current WiFi router standards.  I programmed the analysis code in Ruby.  My final paper and presentation are included here.
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/Class%20Projects/TCPAnalysis">TCP Analysis Code</a>  </p>
+
+<p><strong><em>Tiny Shell</em></strong>
+This was a really fun project in Operating Systems that had us implement a bash shell in C++.  We had to implement a lot of the commands such as fg, bg, and alias.  We also had to implement IO indirection and piping.
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/Class%20Projects/Tiny%20Shell">Tiny Shell Code</a></p>
+
+<p><strong><em>ext2cat filesystem</em></strong>
+This cool project in Operating Systems was to implement a ext2cat filesystem.  We used C++ and were able to implement all the block allocation algorithms that the project required and it ran the second fastest in our class competition.
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/Class%20Projects/ext2cat%20filesystem">Ext2Cat Filesystem</a></p>
 
 <h3>
 <a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
