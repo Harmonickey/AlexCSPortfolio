@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>AlexComputerScienceProjects by Harmonickey</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>AlexComputerScienceProjects</h1>
+        <h2>A portfolio of my computer science programming projects.</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/Harmonickey/AlexCSPortfolio/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/Harmonickey/AlexCSPortfolio/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/Harmonickey/AlexCSPortfolio" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h3>
+<a name="check-out-some-of-my-most-prominent-non-corporate-projects-below" class="anchor" href="#check-out-some-of-my-most-prominent-non-corporate-projects-below"><span class="octicon octicon-link"></span></a>Check out some of my most prominent (non-corporate) projects below.</h3>
+
+<p>My projects below are organized by project work type.</p>
+
+<a href="#computer-science-research">Computer Science Research</a>
+<a href="#class-projects">Class Projects</a>
+<a href="#ExtraIndividualProjects">Extra Individual Projects</a>
+<a href="#ProjectEuler">Project Euler</a>
+<a href="#Websites">Websites</a>
+<a href="#XNAProjects">XNA Projects</a>
+
+<h3>
+<a name="computer-science-research" class="anchor" href="#computer-science-research"><span class="octicon octicon-link"></span></a>Computer Science Research</h3>
+
+<p>This includes some of my favorite computer science research.  I worked with the Astronomy Department at Northwestern University during my Freshman year during the summer.  I worked on the LALInference project, which was a gravitational wave estimation algorithm.  They needed the algorithm to perform at much faster speeds because they were waiting unreasonable amounts of time just to get the results from the data input.  Therefore, my project consisted of researching methods and implementing a way to speed up the processing.  I came up with a GPU Optimization algorithm that used CUDA 4.0.  I wrapped their main mathematical code and added a good amount of my own to run the optimization.  My implementation decreased their processing time by 40%.  I even added a separate optimization to another bottleneck but with OpenMP, which increased the percentage to 45%.  The code and research paper is below.</br>
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/CS%20Research">GPU Optimization Research</a></p>
+
+<h3>
+<a name="class-projects" class="anchor" href="#class-projects"><span class="octicon octicon-link"></span></a>Class Projects</h3>
+
+<p>This is a list of my favorite and most challenging projects from my time at Northwestern.  They are not listed in any particular order.</p>
+
+<p><em><strong>B+Tree</strong></em></br>
+This project was to create a B+Tree in C++ in order to implement a database that stores key/value pairs.  The class was Intro to Databases.</br>
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/Class%20Projects/B%2Btree">B+Tree Code</a></p>
+
+<p><strong><em>Kernel Memory Allocator</em></strong></br>
+This project was to create an operating system kernel memory allocator in C++.  It worked in the UNIX system and was a project for the Operating Systems course.</br>
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/Class%20Projects/Kernel%20Memory%20Allocator">Kernel Memory Allocator Code</a></p>
+
+<p><strong><em>Multithreaded Server</em></strong></br>
+This project was for the Operating Systems course, and it was to create a small server that supported multithreading in C++ so that we could implement an airplane reservation system.</br>
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/Class%20Projects/Multithreaded%20Server">Multithreaded Server Code</a></p>
+
+<p><strong><em>Othello</em></strong></br>
+This was a really fun project in the Intro to AI course.  I had to create an Othello computer player that would (ideally) never lose.  We implemented Alpha/Beta pruning, Backtracking, Forward Checking, and some other algorithmic techniques.  We had the option to create it in Python or C++, and I chose to implement it in C++.  This was the third large project in the class, with the first one being Tic-Tac-Toe and the second being Sudoku.</br>
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/Class%20Projects/Othello">Othello Code</a></p>
+
+<p><strong><em>TicTacToe</em></strong></br>
+This was the first project in the Intro to AI course, and we implemented Backtracking and Forward Checking, which was enough to get the program to win or tie every time since the sample size wasn't too big (like Othello).  This was very fun to implement and was done in C++.</br>
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/Class%20Projects/Tic%20Tac%20Toe">TicTacToe Code</a></p>
+
+<p><strong><em>"Red-White-Blue" Political Database</em></strong></br>
+This was a really cool web project which focused on the use of the SQL database.  We used SQLite3 (SQL), Javascript, Perl, and HTML to implement the project.  The goal was to aggregate certain political parties and show their statistics on a google map.  There were other small objectives such as creating a reliable and secure login methodology for the user which used the SQL database.  This was the first project in the Intro to Database Course.</br>
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/Class%20Projects/SQL%20with%20Perl">Red White Blue, Political Database Code</a></p>
+
+<p><strong><em>Sudoku Solver</em></strong></br>
+This was the second main Intro to AI project.  Here we had to program a sudoku solver in C++ which could take in 9x9 to 25x25 boards and solve any of them within seconds.  We used Alpha Beta Pruning, Backtracking, and Forward Checking.  One of my favorite projects to implement.</br>
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/Class%20Projects/Sudoku%20Solver">Sudoku Solver Code</a></p>
+
+<p><strong><em>TCP Analysis Research</em></strong></br>
+This was a really fun project in the Problems with Cloud Computing class.  We learned all about how the cloud works by reading and debating research papers.  We learned about tons of different techniques and methods to implementing cloud networks.  One of our main projects was to create a research proposal from one of the 8 problems described on the first day.  I chose to work with TCP Analysis.  We analyzed TCP connections for Ethernet, WiFi, Moving WiFi, Cellular Data Connections, and moving Cellular Data Connections.  We focused in the problem with why Cell Data is so much slower and drops connections more than WiFi.  Essentially, cell towers are just not up to date with current WiFi router standards.  I programmed the analysis code in Ruby.  My final paper and presentation are included here.</br>
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/Class%20Projects/TCPAnalysis">TCP Analysis Code</a></p>
+
+<p><strong><em>Tiny Shell</em></strong></br>
+This was a really fun project in Operating Systems that had us implement a bash shell in C++.  We had to implement a lot of the commands such as fg, bg, and alias.  We also had to implement IO indirection and piping.</br>
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/Class%20Projects/Tiny%20Shell">Tiny Shell Code</a></p>
+
+<p><strong><em>Ext2Cat Filesystem</em></strong></br>
+This cool project in Operating Systems was to implement a ext2cat filesystem.  We used C++ and were able to implement all the block allocation algorithms that the project required and it ran the second fastest in our class competition.</br>
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/Class%20Projects/ext2cat%20filesystem">Ext2Cat Filesystem Code</a></p>
+
+<p><strong><em>Calendar</em></strong></br>
+This was a simple project to help out with the Intro to Programming course.  I was a tutor, so I helped to create the key that was the Calendar program written in Python.  It should be able to move forward and backward in the calendar without problems.</br>
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/Class%20Projects/Calendar">Calendar Code</a></p>
+
+<p><strong><em>Spell Checker</em></strong></br>
+This was a super fun project to test out data structures and algorithm analysis in my Data Structures and Management class.  We implemented a spell checker algorithm that used a double hash, and the hash function was a cyclic hash.  It would be able to check any word in under a second, basically as fast as Microsoft Word's spell checker.</br>
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/Class%20Projects/Spell%20Checker/Spell%20Checker">Spell Checker Code</a></p>
+
+<p><strong><em>Http Client/Server</em></strong></br>
+This was a C++ project in the Intro to Networking class.  The project tested us to implement a real client and server connection over IP.  We had to create our own IP packets in the client and capture them in the server.</br>
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/Class%20Projects/Http%20Client%20and%20Server/MyCode">Http Client/Server Code</a></p>
+
+<p><strong><em>Routing Lab</em></strong></br>
+In this C++ project we had to implement a routing network made of pseudo router connection points.  We had to use Djikstra's shortest path algorithm in order to find the shortest path for an IP packet to travel along the network.  This was another one of the neat projects from Intro to Networking.</br>
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/Class%20Projects/Routing%20Lab/Project%203/routelab-w13"></a>Routing Lab Code</p>
+
+<h3>
+<a name="extra-individual-projects" class="anchor" href="#class-projects"><span class="octicon octicon-link"></span></a>Extra Individual Projects</h3>
+
+<p><strong><em>Hatchu Show Ordering Program</em></strong></br>
+My ballroom, latin, and swing team (BLAST) was having troubles coming up with a good show order with all the dance numbers that they had.  They had a few constraints, each half of the show needed to be a certain number of pieces, they needed to have no more than 2 of any style of dance, and each cast member cannot be in consecutive piece due to costume changes.  So I offered to create a program that creates possible show orders based on those constraints (and some other small ones).  I used my AI knowledge of a constraint satisfaction problem to solve the issue.  It takes in a cast list input, the user can create the dance numbers in the GUI, and the program outputs as many show orders as you'd like (provided that there are that many or more possible solutions).  It runs quite fast and is suprisingly cool for my first outside-of-class application of what I learned in school.  For a challenge, I wrote it in both Java and C#.</br>
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/Extra%20Individual%20Projects/Hatchu_CSharp"></a>Hatchu C#
+</br>
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/Extra%20Individual%20Projects/Hatchu_Java"></a>Hatchu Java</p>
+
+<p><strong><em>Encryption/Decryption Program</em></strong></br>
+This was a little C# project I made to implement some mathematical cryptography concepts I'd learned in my Mathematical Foundations of Computer Science course.  They didn't have a project for it, so I decided to try it out.  It implements rotating keys and modifies the input text file accordingly, which you can decrypt if you know the modulus and key that it gives you when you encrypted the file.</br>
+<a href="https://github.com/Harmonickey/AlexCSPortfolio/tree/master/Extra%20Individual%20Projects/Encryption-Decryption%20Program/Encryption-Decryption%20Program"></a>Encryption/Decryption Program Code</p>
+
+
+
+<h3>
+<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>The creator of all of the code is <a href="https://github.com/Harmonickey" class="user-mention">@Harmonickey</a></p>
+
+      </section>
+    </div>
+
+    
+  </body>
+</html>
