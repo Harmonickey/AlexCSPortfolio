@@ -1,0 +1,8 @@
+Average likelihood difference from the original test...
+
+sincosf: 0.991808
+
+sincos: 0.991808
+
+sinfcosf: 0.991808
+
