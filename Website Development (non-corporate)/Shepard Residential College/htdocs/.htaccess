@@ -1,0 +1,6 @@
+Redirect 303 /new/ /
+
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}] #For HTTP auth
+RewriteRule ^v/([A-Za-z0-9]+)/?$ v.php?page=$1 [NC,L]            #NC - not case-sensitive, L - last rewrite rule to be used, $1 - match whatever was in the brackets
+

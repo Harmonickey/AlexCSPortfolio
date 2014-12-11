@@ -1,0 +1,296 @@
+@charset "utf-8";
+/* CSS Document for shepardrc.com */
+
+
+/* load  external fonts */
+@font-face {
+    font-family: "Junction";
+    src: url('junction_02-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* set up the page */
+* {
+	margin: 0;
+	padding: 0;
+}
+html, body {
+	font: 12pt "Junction", Arial, Helvetica, sans-serif;
+	height: 100%;
+	background: #2D96FF url(wool_tile.jpg);
+}
+.unselectable { 
+	-moz-user-select: none; 
+	-khtml-user-select: none; 
+	-webkit-user-select: none; 
+	-o-user-select: none; 
+} 
+
+
+/* container settings */
+#container {
+	width: 1024px;
+	margin: 0 auto;
+	min-height: 100%;
+	/* background color for the main content area */
+	background-color: #fff;
+	/* this shadow is borrowed code */
+	-moz-box-shadow: 0px 10px 50px #000;
+	-webkit-box-shadow: 0px 10px 50px #000;
+	box-shadow: 0px 10px 50px #000;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+
+
+
+/* header (big title) */
+#header {
+	position: relative;
+}
+#header span {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 64px;
+	width: 1024px;
+	background-color: black;
+	/* for a translucent background in IE, FF, Webkit */
+	filter: alpha(opacity=75); 
+	-moz-opacity: .75;
+	opacity: .75;
+	z-index: 8;
+}
+#header h1 { 
+	position: absolute;
+	left: 190px;
+	bottom: 4px;
+	text-align: center;
+	font-size: 34pt;
+	font-weight: normal;
+	color: white;
+	z-index: 9;
+}
+#header blue {
+	color: #2D96FF;
+}
+/* sets up the slideshow */
+#slideshow { 
+	position: relative; 
+	height: 300px;
+	width: 1024px;
+}
+#slideshow img { 
+	z-index: 5; 
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#slideshow img.active {z-index: 7; }
+#slideshow img.last-active {z-index: 6; }
+
+
+/* navigation bar and subbar */
+#nav {
+	width: 100%;
+	position: relative;
+	height: 37px;
+	border-top: 3px solid;
+	background-color: #333;
+	z-index: 10;
+}
+#nav ul {
+	list-style: none;
+	position: absolute;
+	left: 0;
+	top: -3px;
+}
+#nav li {
+	float: left;
+	position: relative;
+	width: auto;
+	background-color: #333;
+	border-top: 3px solid;
+	text-align: center;
+}
+#nav li ul {
+	display: none;
+	position: absolute;
+	top: auto;
+	left: 0;
+}
+#nav li:hover {
+	border-color: #2D96FF;
+}
+#nav li:hover ul {
+	display: block;
+}
+#nav li ul li {
+	width: 12.5em;
+	border: none;
+	text-align: left;
+	background: #222;
+	display: inline;
+}
+#nav li ul li:hover {
+	background: #333;
+	color: #fff;
+}
+#nav a {
+	padding: .5em 1.2em .5em 2.1em;
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	background: none;
+}
+#nav a:hover, #nav a:active {
+	color: #fff;
+	background: url(sheep_icon.png) 3% center no-repeat;
+}
+
+/* main content area */
+/* the style uses Junction for titles and menus, Calibri for body text */
+#main {
+	font: 13pt Calibri, Arial, Helvetica, sans-serif;
+	padding: .6em 1.2em;
+}
+#main h1, #main h2, #main h3, #main h4 {
+	font-family: "Junction";
+	font-weight: normal;
+}
+#main h2, #main h3, #main h4 {
+	padding: .2em 0 .1em 0;
+}
+#main h1 {
+	font-size: 22pt;
+	padding: 0 0 .2em 0;
+}
+#main h2 {
+	font-size: 18pt;
+}
+#main h5 {
+	font-family: "Junction";
+	font-weight: normal;
+	font-size: 11pt;
+	padding: .4em .6em .4em .6em;
+	margin: .3em 0 .4em 0;/*
+	border-bottom: 1px solid #999;*/
+	background-color: #eee;
+}
+#left1 {
+	float: left;
+	width: 27%;
+	padding: 0 1% 0 0;
+}
+#right1 {
+	float: right;
+	width: 71%;
+	padding: 0 0 0 1%;
+}
+#left2 {
+	float: left;
+	width: 71%;
+	padding: 0 1% 0 0;
+}
+#right2 {
+	float: right;
+	width: 27%;
+	padding: 0 0 0 1%;
+}
+#right2 p {
+	font-size: 12pt;
+	line-height: normal !important;
+	padding: 0 .6em .8em !important;
+}
+#right2 img {
+	width: 100%;
+	height: auto;	
+}
+#main ul , #main ol{
+	padding: 0 0 .5em 2em;
+}
+/* link style for content */
+#main a, #main a:visited {
+	text-decoration: none;
+	color: #0888f0;
+}
+#main a:hover, #main a:active {
+	color: #0888f0;
+	text-decoration: underline;
+}
+#main p {
+	line-height: 17pt;
+	padding: 0 0 .8em 0;
+}
+#spacer {
+	clear: both;
+	padding-bottom: 120px;
+}
+
+/* for profiles */
+.profile {
+	font: 13pt Calibri, Arial, Helvetica, sans-serif;/*
+	border-top: 1px solid;
+	border-bottom: 1px solid;*/
+	background-color: #eee;
+	margin: 5px 0 10px 0;
+}
+.profile img {
+	float: left;
+	padding: 5px 12px 5px 5px;
+}
+.profile name {
+	font-family: Junction, Calibri, Arial, Helvetica, sans-serif;
+	font-size: 15pt;
+	display: block;
+	padding: 5px 0 0 0;
+}
+.profile p {
+	padding: 0 .8em .1em 0 !important;
+	line-height: normal !important;
+}
+.profile i {
+	font-size: 12pt;
+	display: block;
+	padding: .3em 0 0 0;
+}
+.aspacer {
+	clear: both;
+}
+
+/* footer */
+#footer {
+	clear: both;
+	width: 1024px;
+	position: relative; 
+	margin: -100px auto 0 auto;
+	height: 100px;
+	text-align: center;
+	color: white;
+	background-color: #333;
+}
+#footer a {
+	color: white;
+}
+#footer div {
+	padding: .4em;
+}
+#footleft {
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: .5em 1em .3em;
+}
+#footright {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: .6em 1em;
+}
+
+/* for back to top popup */
+#toTop {width:90px;z-index: 10; background:#333; border: 1px solid #555; text-align:center; padding:5px; position:fixed; bottom:0px; right:0px; cursor:pointer; display:none; color:#fff;text-transform: lowercase; font-size: 0.9em; font-family: Calibri, Arial, Helvetica, sans-serif;}
+.childcat {display:none;}

@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+
+table {
+	margin: 0 auto;/*
+	border: 1px solid;*/
+	background: #eee;
+}
+
+#main {
+	min-height: 500px;
+}
+
+th {
+	text-align: left;
+	padding: 3px 0;
+}
+
+th, td {
+	padding: 1px 6px;
+}
+
+input {
+	padding: 1px;
+	width: 300px;
+}

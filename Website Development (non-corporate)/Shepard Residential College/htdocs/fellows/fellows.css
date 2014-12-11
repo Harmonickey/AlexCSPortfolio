@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+
+#fellowNav ul
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+#fellowNav ul li
+{
+	display: inline;
+	padding: 0px 5px;
+	margin: 0px;
+}
+
+#fellowNav
+{
+	text-align: center;
+	background: white;
+}
+
+#fellowNav ul li:hover, #fellowNav ul li:active
+{
+	text-decoration: underline;
+	color: #F6F;
+}

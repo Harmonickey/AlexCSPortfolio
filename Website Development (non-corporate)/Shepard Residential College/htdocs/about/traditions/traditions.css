@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+p + h2, div + h2 {
+	margin-top: 10px;
+}
+
+
+#olym
+{
+	height: 250px;	
+}
+
+
+#pic1
+{
+	width: 375px;
+	height: 250px;	
+	float: left;
+	margin-right: 14px;
+}
+
+#coffee
+{
+	height: 250px;	
+}
+
+#pic2
+{
+	width: 375px;
+	height: 385px;
+	float: left;
+	margin-right: 14px;	
+}
+
+#halloween
+{
+	height: 385px;	
+}
+
+#pic3
+{
+	width: 375px;
+	height: 290px;
+	float: left;
+	margin-right: 14px;	
+}
+
+#minutes
+{
+	height: 290px;
+}
+

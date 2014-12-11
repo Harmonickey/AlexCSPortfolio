@@ -1,0 +1,108 @@
+@charset "utf-8";
+/* CSS for sample rooms page */
+
+#roomviewer {
+	position: relative;
+	width: 980px;
+	height: 640px;
+}
+
+#roomtitle {
+	position: absolute;
+	left: 5px;
+	right: 5px;
+	top: 5px;
+	height: 32px;
+	padding: 3px 12px 7px;
+	background-color: #eee;
+}
+
+#roomphotowrap {
+	position: absolute;
+	left: 5px;
+	top: 51px;
+	width: 720px;
+	height: 480px;/*
+	background-color: #eee;*/
+}
+#roomphoto {
+	position: relative;
+	text-align: center;
+}
+#roomphoto img {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#roomnext {
+	position: absolute;
+	left: 365px;
+	top: 51px;
+	width: 360px;
+	height: 480px;
+	background: url(right_arrow.png) 99% bottom no-repeat;
+	z-index: 10;
+	opacity: 0;
+}
+#roomprev {
+	position: absolute;
+	left: 5px;
+	top: 51px;
+	width: 360px;
+	height: 480px;
+	background: url(left_arrow.png) 1% bottom no-repeat;
+	z-index: 10;
+	opacity: 0;
+}/*
+#roomnext:hover {
+	background: url(right_arrow.png) right bottom no-repeat;
+}
+#roomprev:hover {
+	background: url(left_arrow.png) left bottom no-repeat;
+}*/
+
+#roomcomments {
+	position: absolute;
+	top: 536px;
+	left: 5px;
+	right: 254px;
+	bottom: 5px;
+	padding: 5px 10px;
+	background-color: #eee;
+}
+
+#roomlist {
+	position: absolute;
+	right: 5px;
+	top: 51px;
+	left: 730px;
+	bottom: 5px;
+	background-color: #eee;
+	padding: 3px 10px;
+}
+
+#roomlist ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+#roomlist ul li {
+	padding: 1px 5px;
+}
+
+#roomlist .roomhead {
+	display: block;
+	background: #ddd;
+	margin: 10px 0 0;
+}
+
+#roomlist .roomsel{
+	-moz-user-select: none; 
+	-khtml-user-select: none; 
+	-webkit-user-select: none; 
+	-o-user-select: none; 
+}
+#roomlist .roomsel:hover {
+	color: #2D96FF;
+}

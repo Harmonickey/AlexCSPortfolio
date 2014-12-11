@@ -1,0 +1,25 @@
+#calendar a,
+#calendar a:visited,
+#calendar a:hover,
+#calendar a:active {
+    color: white;
+    text-decoration: none;
+}
+#calendar a,
+#calendar a:visited {
+    color: white;
+    text-decoration: none;
+    border: 1px solid #2D96FF;
+    background-color: #2D96FF;
+}
+#calendar a:hover,
+#calendar a:active {
+    border: 1px solid #62b2ff;
+    background-color: #62b2ff;
+}
+#main {
+    padding-bottom: 20px;
+}
+#spacer {
+    padding-bottom: 100px;
+}

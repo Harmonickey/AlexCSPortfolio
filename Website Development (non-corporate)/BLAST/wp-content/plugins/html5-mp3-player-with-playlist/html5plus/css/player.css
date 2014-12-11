@@ -1,0 +1,195 @@
+/* CSS Document */
+/* Tradecus  CSS files - by //Demos India // */
+/* Global Settings start */
+
+
+
+/* Link  CSS */
+
+	.Link a {Font-Family:Verdana,  Arial,Tahoma;text-decoration:underline; font-weight:normal; }
+	.Link a:hover {Font-Family:Verdana,Arial, Tahoma;text-decoration:none; font-weight:normal; }
+	
+	.Link1 a {Font-Family:Verdana,  Arial,Tahoma;text-decoration:none; font-weight:normal; }
+	.Link1 a:hover {Font-Family:Verdana,Arial, Tahoma;text-decoration:underline; font-weight:normal; }
+
+
+/* Font CSS */
+	.Light10{Font-Family: Verdana, Arial, Helvetica, sans-serif; Font-Size:10px;}
+	.Light11{Font-Family: Verdana, Arial, Helvetica, sans-serif; Font-Size:11px;}
+	.Light12{Font-Family: Verdana, Arial, Helvetica, sans-serif; Font-Size:12px;}
+	.Light13{Font-Family: Verdana, Arial, Helvetica, sans-serif; Font-Size:13px;}
+	.Light16{Font-Family: Verdana, Arial, Helvetica, sans-serif; Font-Size:16px;}
+	.Light18{Font-Family: Verdana, Arial, Helvetica, sans-serif; Font-Size:18px;}
+	.Light20{Font-Family: Verdana, Arial, Helvetica, sans-serif; Font-Size:20px;}
+	.Light24{Font-Family: Verdana, Arial, Helvetica, sans-serif; Font-Size:24px;}
+
+/* Background color CSS */
+	.BgWhite{background-color:#FFFFFF}
+	.BgGray{background-color:#ccc}
+
+
+/* text color CSS */
+	.Gray{color:#737373;}
+	
+	.White{color:#FFFFFF;}
+	
+	.Black{color:#000000;}
+	
+	.Blue{color:#056a7c;}
+	
+	.Red{color:#cc0a0a;}
+
+/* image boder color CSS */
+	.Imgbdr{border:1px solid #ccc;}
+
+/* table boder color CSS */
+	.Tblbdr{border:1px solid #C4C4C4;}
+
+/* Padding CSS */
+	.Padding2 { padding:2px; }
+	.Padding3 { padding:3px; }
+	.Padding4 { padding:4px; }
+	.Padding5 { padding:5px; }
+	.Padding8 { padding:8px; }
+	.Padding10{ padding:10px; }
+
+/* Padding Top + Bottom */
+
+	.PaddingTopBottom2{ padding:2px 0; }
+	.PaddingTopBottom3{ padding:3px 0; }
+	.PaddingTopBottom5{ padding:5px 0; }
+	.PaddingTopBottom8{ padding:8px 0; }
+	.PaddingTopBottom10{ padding:10px 0; }
+	.PaddingTopBottom12{ padding:12px 0; }
+	.PaddingTopBottom15{ padding:15px 0; }
+
+/* Margin color CSS*/
+
+	.Margin5{margin:5px 5px 5px 5px;}
+
+/* Table boders */
+	.Bdr_1{border:1px solid #000;}
+
+/* Line Height */
+	.Lignhight12{line-height:12px}
+	.Lignhight14{line-height:14px}
+	.Lignhight16{line-height:16px}
+	.Lignhight18{line-height:18px}
+
+/* Floats */
+	.FloatLeft{ float:left; }
+	.FloatRight{ float:right; }
+
+/* Text Align */
+
+	.TextAlignLeft{ text-align:left; }
+	.TextAlignRight{ text-align:right; }
+	.TextAlignCenter{ text-align:center; }
+	.TextAlignJustify{ text-align:justify; }
+
+/* Form Css */
+	.TextBox1{ font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; font-weight: normal; padding:0px; color:#333; height:18px; border:1px solid #ccc; background:#FFFFFF; }
+	
+	.Button1{  background:#CCCCCC; font-family:Verdana, Arial, Helvetica, sans-serif; color:#333; text-align:center; }
+	
+/* Main StyleSheet Start Here */
+
+/* ClearFix */
+.Clearfix:after {content:".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
+.Clear{ clear:both; }
+.Clearfix {display: inline-block;}
+
+/*#WraperMain{width:566px; margin:15px auto; height:207px; padding:0px; background:url(../images/player-bg.jpg) no-repeat; }*/
+
+#WraperMain{width:566px; margin:0px auto; height:207px; padding:0px;  }
+
+#WraperMainLarge{width:566px; /*margin:0px auto;*/ height:207px; padding:0px;  }
+
+#WraperMainSmall{width:347px; margin:0px auto; height:207px; padding:0px;  }
+
+
+	#MainPlayer{ float:left; width:337px; margin:0px; height:200px; padding:0px; }
+	#MainPalylistbox{ float:left; width:215px; margin:0 0 0 10px; height:200px; padding:0px; }
+
+#Music-title-box{ clear:both; padding:5px 15px; width:100%; height:auto; margin:0px; font-family:Arial, Helvetica, sans-serif; color:#fff; font-size:13px; }
+#Player-display-screen{ clear:both; width:316px; height:86px; margin:0px auto; }
+#Player-progressbar{ clear:both; width:322px; height:20px; margin:11px auto 0 11px;   }
+#Player-progressbar01{ clear:both; background:url(../images/progress-bar-bg.jpg) repeat-x; width:322px; height:7px; -webkit-border-radius: 10px;
+-moz-border-radius: 10px; border-radius: 10px;}
+#Player-progressbar01:hover{ clear:both; width:322px; height:7px; -webkit-border-radius: 10px;-moz-border-radius: 10px; border-radius: 10px;}
+
+#Player-Control{ clear:both; width:325px; height:45px; margin:0px auto; }
+#Play-back{ float:left; width:30px; margin-top:5px; }
+#Play-button{ float:left; width:45px; }
+#Play-next{ float:left; width:30px; margin-top:5px; }
+
+#Play-Revind{ float:left; width:55px; height:13px; margin:10px 0 0 0; }
+#Play-Timer{ float:left; width:90px; height:13px; margin:13px 0 0 0;  font-family:Arial, Helvetica, sans-serif; color:#fff; font-size:11px; }
+#Sound-bar{ float:left; width:75px; height:15px; margin:13px 0 0 0px; background:url(../images/volume-bar-bg.png) no-repeat; position:relative; }
+#Sound-bar #sound01{ position:absolute; width:10px; height:10px; top:3px; left:15px; }
+
+
+.soundbar{ float:left; width:68px; height:5px; margin:17px 0 0 0px; position:relative; }
+
+
+#Playlist-heading{ clear:both; width:185px; height:16px; padding:6px 15px; margin:3px 0 3px 0;  font-family:Arial, Helvetica, sans-serif; color:#faca14; font-size:13px; border:1px solid #252525; }
+
+#Playlist-block{ clear: both;
+    height: 166px;
+    margin: 0;
+   /* overflow: auto;*/
+    width: 211px; padding:0 3px 0 0;
+	}
+.Playlist01{ clear:both; width:auto; height:28px; padding:3px 15px; margin:0 0 3px 0;  font-family:Arial, Helvetica, sans-serif; color:#fff; font-size:12px; border:1px solid #252525; }
+
+
+.playing{ clear:both; width:auto; height:28px; font-family:Arial, Helvetica, sans-serif; color:#fff; font-size:13px; font-stretch:extra-expanded; font-weight:bold; /*background:url(../images/song-list-bg.png) repeat-x; background-position:-10px;*/ }
+
+
+.Playlist01 .Title01{  font-family:Arial, Helvetica, sans-serif; color:#a19b9b; font-size:10px; margin:0px 0 0 0px;  }
+.Playlist01 ol li a{  font-family:Arial, Helvetica, sans-serif; color:#FFFFFF; font-size:11px; }
+.Playlist01 ol {padding:0; margin:0 0 0 32px; }
+
+
+/* Tiny Scrollbar */
+#scrollbar1 { width: 215px;  }
+#scrollbar1 .viewport { height: 164px; overflow: hidden; position: relative; }
+#scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; padding: 0; margin: 0; width:209px;}
+#scrollbar1 .scrollbar{ position: relative; background-position: 0 0; float: right; width: 15px; }
+#scrollbar1 .track {height: 100%; width:13px; position: relative; padding: 0 1px; }
+
+
+/*#scrollbar1 .thumb { background: transparent url(../images/bg-scrollbar-thumb-y.png) no-repeat 50% 100%; height: 20px; width: 20px; cursor: pointer; overflow: hidden; position: absolute; top: 0; left: 0px; }
+#scrollbar1 .thumb .end { background: transparent url(../images/bg-scrollbar-thumb-y.png) no-repeat 50% 0; overflow: hidden; height: 5px; width: 20px; }
+*/
+
+#scrollbar1 .thumb .end {
+    background: url("../images/bg-scrollbar-thumb-y.png") no-repeat scroll 50% 0 transparent;
+    overflow: hidden;
+    width: 20px;
+}
+
+
+#scrollbar1 .thumb {
+    background: url("../images/bg-scrollbar-thumb-y.png") no-repeat scroll 50% 95% transparent;
+    cursor: pointer;
+    height: 20px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 20px;
+	
+	}
+
+
+#scrollbar1 .disable { display: none; }
+
+.audiojs {
+	/*visibility:hidden !important;
+	position:absolute  !important;*/
+	width:0px;
+	height:0px;
+	
+	
+}

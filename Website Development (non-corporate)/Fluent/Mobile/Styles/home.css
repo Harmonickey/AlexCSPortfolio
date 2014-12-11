@@ -1,0 +1,24 @@
+/* This all helps with the color inversion */
+
+html, body
+{
+	background-color: #264368;
+}
+
+.lead,
+.lead-list
+{
+	color: #dee1e7;
+}
+
+.navbar
+{
+	background-color: #264368;
+	border-color: #264368;
+}
+
+#copyright,
+#company-mark
+{
+	color: #dee1e7;
+}

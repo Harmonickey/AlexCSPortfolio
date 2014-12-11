@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+
+#photoviewer {
+	margin: 8px 0 0 10px;
+	width: 960px;
+	height: 640px;
+	position: relative;
+	background: #000;
+}
+
+#loading {
+	position: absolute;
+	width: 960px;
+	height: 640px;
+	background: rgba(0, 0, 0, 0.5) url(loading.gif) 50% 50% no-repeat;
+	z-index: 10;
+	display: none;
+}
+
+#photoviewer img {
+	display: block;
+	margin: 0 auto;
+}
+
+#photoviewerphoto {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#photoviewerphoto img {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#photoviewerprev {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 640px;
+	width: 480px;
+	background: url(left_arrow.png) 1% bottom no-repeat;
+	opacity: 0;
+	z-index: 9;
+}
+
+#photoviewernext {
+	position: absolute;
+	left: 480px;
+	top: 0;
+	height: 640px;
+	width: 480px;
+	background: url(right_arrow.png) 99% bottom no-repeat;
+	opacity: 0;
+	z-index: 9;
+}
+
+#photoviewercaption {
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	width: 960px;
+	height: 25px;
+	z-index: 8;
+	color: white;
+	font-size: 14pt;
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.75);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+	text-align: center;
+}

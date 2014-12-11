@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+.mouseoverwrap {
+	position: relative;
+	width: 698px;
+	height: 470px;
+}
+
+.mouseoverwrap img {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.mouseover {
+	z-index: 7;
+}
+.mouseover:hover {
+	opacity: 0;
+}

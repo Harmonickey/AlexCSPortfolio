@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* for the floor plan selector on the Facilities page */
+
+/* set up the floor plan pics */
+
+#left2 h2 {
+	background: #eee;
+	padding: .2em .4em;
+}
+
+#photoselectbox { 
+	position: relative; 
+	width: 690px;
+	height: 600px;
+}
+
+#photoselectmenu a {
+	padding: 0 .1em;
+	font-weight: bold;
+	color: black !important;
+}
+#photoselectmenu a:hover {
+	color: #2D96FF !important;
+	text-decoration: none;
+}
+
+.photoselectactive {
+	color: #2D96FF;
+}

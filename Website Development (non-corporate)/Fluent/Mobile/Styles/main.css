@@ -1,0 +1,74 @@
+*
+{
+	font-family: Verdana;
+}
+
+html, body
+{
+	height: 100%;
+	background-color: white;
+}
+
+#navbar
+{
+	border-top: 1px solid #264368;
+	border-bottom: 1px solid #6B6F74;
+}
+
+.navbar
+{
+	background-color: white;
+	border-color: white;
+}
+
+.navbar-nav
+{
+	margin-top: 0px;
+}
+
+#navbar a
+{
+	font-weight: bold;
+	color: #aaa;
+}
+
+#footer
+{
+	padding: 20px 15px 0 15px;
+	color: #c6c7c9;
+	border-top: 1px solid #dee1e7;
+	width: 100%;
+}
+
+#footer p
+{
+	margin: 0;
+}
+
+#copyright
+{
+	float: left;
+	width: 50%;
+	color: #264368;
+}
+
+#company-mark
+{
+	float: right;
+	width: 50%;
+	text-align: right;
+	color: #264368;
+}
+
+.cover-heading,
+.lead
+{
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #264368;
+}
+
+.active
+{
+	color: #264368 !important;
+}

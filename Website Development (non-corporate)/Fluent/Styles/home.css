@@ -1,0 +1,24 @@
+/* This all helps with the color inversion */
+
+html, body
+{
+	background-color: #264368;
+}
+
+#fluent-nav,
+#fluent-desc
+{
+	color: #264368;
+}
+
+#fluent-nav a:hover
+{
+	color: white;
+	background-color: #264368;
+}
+
+#fluent-desc, 
+#fluent-desc-container ul
+{
+	color: #dee1e7;
+}

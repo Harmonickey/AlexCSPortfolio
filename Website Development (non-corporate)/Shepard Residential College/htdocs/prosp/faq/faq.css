@@ -1,0 +1,31 @@
+dt {
+	font-family: "Junction", Arial, Helvetica, sans-serif;
+	padding: .3em 0 .3em .4em;
+	background-color: #eee;
+}
+/*
+dt:hover, #exp:hover, #col:hover {
+	text-decoration: underline;
+}*/
+#exp, #col {
+	display: inline;
+}
+
+/* want to keep questions underlined when answer is expanded */
+.expanded {
+	text-decoration: underline;
+}
+dd {
+	padding: .8em 0;
+}
+
+/* to style addresses correctly */
+pre {
+	padding: .5em 2em;
+	font-family: Consolas, Courier New, monospace;
+}
+
+a dt, a:hover dt, a:active dt, a:visited dt {
+	color: black;
+	text-decoration: none;
+}
