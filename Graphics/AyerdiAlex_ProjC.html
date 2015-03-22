@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Lighting, Camera, and Objects</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+  </head>
+  
+  <style>
+  .noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  </style>
+	<!--	Create the HTML5 'canvas' element in which we will run WebGL
+	-->
+  <body class="text-center" onload="main()">
+
+    <canvas id="webgl" style="width: 100%; height:100%;">
+    Please use a browser that supports "canvas"
+    </canvas>
+	
+	<div id="instructions" style="position: absolute; left: 25px; top: 25px; color: white;">
+		<p class="noselect"> Click and drag to pan the camera <br>(will hide instructions and buttons for more mouse dragging space) </p>
+		<p class="noselect"> Use the arrow keys or WASD to strafe the camera.  <br>"U" moves the camera directly up, and "J" moves the camera directly down. </p>
+		<p class="noselect"> PgUp makes the animations rotate faster, and PgDown makes them slower. </p>
+		<p class="noselect"> You may resize your browser window, which will cause the scene <br>
+		    to adjust responsively </p>
+		<br>
+		<br>
+		<div id="light-control">
+			<p class="noselect"> Turn on/off Light Reflectance Attributes </p>
+			<input type="button" class="ambient btn btn-primary" value="Turn Off Ambient" onclick="toggleAmbient()"/>
+			<input type="button" class="diffuse btn btn-primary" value="Turn Off Diffuse" onclick="toggleDiffuse()"/></p>
+			<p class="noselect"></p>
+			<input type="button" class="specular btn btn-primary" value="Turn Off Specular" onclick="toggleSpecular()"/>
+			<input type="button" class="emissive btn btn-primary" value="Turn Off Emissive" onclick="toggleEmissive()"/>
+			<input type="button" class="shiny btn btn-primary" value="Turn Off Shiny" onclick="toggleShiny()"/>
+			<br>
+			<br>
+			<p class="noselect"> Second Light Position Strafing Controls </p>
+			<input type="button" class="btn btn-primary" value="Up" onclick="moveLight('up')"/>
+			<input type="button" class="btn btn-primary" value="Down" onclick="moveLight('down')"/>
+			<input type="button" class="btn btn-primary" value="Left" onclick="moveLight('left')"/>
+			<input type="button" class="btn btn-primary" value="Right" onclick="moveLight('right')"/>
+			<input type="button" class="btn btn-primary" value="Forward" onclick="moveLight('forward')"/>
+			<input type="button" class="btn btn-primary" value="Back" onclick="moveLight('back')"/>
+			
+		</div>
+	</div>
+	<div style="position: absolute; right: 25px; top: 25px; color: white;">
+		<div style="float: left; width: 200px;">
+			<p class="noselect"> Headlight Ambient, Diffuse, Specular RGB Values </p>
+			<p class="noselect"> Ambient </p>
+			<input id="ambient0r" style="color: black; text-align: center; width: 25px;" type="text" value="" onchange="LampChange(0)"/>
+			<input id="ambient0g" style="color: black; text-align: center; width: 25px;" type="text" value="" onchange="LampChange(0)"/>
+			<input id="ambient0b" style="color: black; text-align: center; width: 25px;" type="text" value="" onchange="LampChange(0)"/>
+			<p class="noselect"> Diffuse </p>
+			<input id="diffuse0r" style="color: black; text-align: center; width: 25px;" type="text" value="" onchange="LampChange(0)" />
+			<input id="diffuse0g" style="color: black; text-align: center; width: 25px;" type="text" value="" onchange="LampChange(0)" />
+			<input id="diffuse0b" style="color: black; text-align: center; width: 25px;" type="text" value="" onchange="LampChange(0)" />
+			<p class="noselect"> Specular </p>
+			<input id="specular0r" style="color: black; text-align: center; width: 25px;" type="text" value="" onchange="LampChange(0)"/>
+			<input id="specular0g" style="color: black; text-align: center; width: 25px;" type="text" value="" onchange="LampChange(0)"/>
+			<input id="specular0b" style="color: black; text-align: center; width: 25px;" type="text" value="" onchange="LampChange(0)"/>
+			</div><br>
+			<div style="float: left; margin-top: 15px; width: 200px;">
+			<p class="noselect"> Second Light Ambient, Diffuse, Specular RGB Values </p>
+			<p class="noselect"> Ambient </p>
+			<input id="ambient1r" style="color: black; text-align: center; width: 25px;" type="text" value="" onchange="LampChange(1)" />
+			<input id="ambient1g" style="color: black; text-align: center; width: 25px;" type="text" value="" onchange="LampChange(1)" />
+			<input id="ambient1b" style="color: black; text-align: center; width: 25px;" type="text" value="" onchange="LampChange(1)" />
+			<p class="noselect"> Diffuse </p>
+			<input id="diffuse1r" style="color: black; text-align: center; width: 25px;" type="text" value="" onchange="LampChange(1)" />
+			<input id="diffuse1g" style="color: black; text-align: center; width: 25px;" type="text" value="" onchange="LampChange(1)" />
+			<input id="diffuse1b" style="color: black; text-align: center; width: 25px;" type="text" value="" onchange="LampChange(1)" />
+			<p class="noselect"> Specular </p>
+			<input id="specular1r" style="color: black; text-align: center; width: 25px;" type="text" value="" onchange="LampChange(1)" />
+			<input id="specular1g" style="color: black; text-align: center; width: 25px;" type="text" value="" onchange="LampChange(1)" />
+			<input id="specular1b" style="color: black; text-align: center; width: 25px;" type="text" value="" onchange="LampChange(1)" />
+		</div>
+	</div>
+	
+	<!--	Load in the JavaScript libraries supplied by our textbook 
+			(Matsuda et al., 2013 WebGL Programming Guide) that help us
+			with WebGL programming:
+	-->
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix-quat.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<!--	Finally, load in our own JavaScript program file.
+	-->
+	<script src="materials.js"></script>
+    <script src="AyerdiAlex_ProjC.js"></script>
+  </body>
+</html>
