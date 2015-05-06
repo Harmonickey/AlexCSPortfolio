@@ -1,0 +1,38 @@
+! Blurb file created by Inform build 6L38
+
+status "C:\Program Files (x86)\Inform 7\Internal\Miscellany\CblorbModel.html" "C:\Users\Alex\Documents\Inform\Projects\Turtle of Wrath.inform\Build\StatusCblorb.html"
+
+
+! Identification
+
+project folder "C:\Users\Alex\Documents\Inform\Projects\Turtle of Wrath.inform"
+release to "C:\Users\Alex\Documents\Inform\Projects\Turtle of Wrath.materials\Release"
+
+! Blorb instructions
+
+storyfile leafname "Turtle of Wrath.zblorb"
+storyfile "C:\Users\Alex\Documents\Inform\Projects\Turtle of Wrath.inform\Build\output.z8" include
+ifiction "C:\Users\Alex\Documents\Inform\Projects\Turtle of Wrath.inform\Metadata.iFiction" include
+cover "C:\Users\Alex\Documents\Inform\Projects\Turtle of Wrath.materials\Cover.jpg"
+picture 1 "C:\Users\Alex\Documents\Inform\Projects\Turtle of Wrath.materials\Cover.jpg"
+
+! Placeholder variables
+
+placeholder [IFID] = "1567F0FB-9A21-425D-9D02-F88A218A23B9"
+placeholder [RELEASE] = "1"
+placeholder [YEAR] = "2015"
+placeholder [TITLE] = "Turtle of Wrath"
+placeholder [AUTHOR] = "Alex Ayerdi"
+placeholder [BLURB] = "A work of interactive fiction."
+
+! Other material to release
+
+status instruction ||&nbsp;<a href="source:story.ni#line3"><img border=0 src=inform:/doc_images/Reveal.png></a>||
+status alternative ||Using 'Release along with a website'&nbsp;<a href=inform:/doc404.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with an interpreter', for in-browser play on your website&nbsp;<a href=inform:/doc405.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with a file of "Such-and-Such" called "whatever.pdf"', perhaps to add a manual, or a welcoming note&nbsp;<a href=inform:/doc400.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with the source text'&nbsp;<a href=inform:/doc411.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with a solution'&nbsp;<a href=inform:/doc410.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with the library card'&nbsp;<a href=inform:/doc411.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with the introductory booklet'&nbsp;<a href=inform:/doc403.html><img border=0 src=inform:/doc_images/help.png></a>||
+status alternative ||Using 'Release along with the introductory postcard'&nbsp;<a href=inform:/doc403.html><img border=0 src=inform:/doc_images/help.png></a>||

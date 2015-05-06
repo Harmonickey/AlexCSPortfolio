@@ -1,0 +1,1251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Skein rootNode="node-0x027C4910" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+  <generator>Inform 7 for Windows</generator>
+  <activeNode nodeId="node-0x027C4910"/>
+  <item nodeId="node-0x027C4910">
+    <command xml:space="preserve">- start -</command>
+    <result xml:space="preserve">Nuclear war is on the horizon, two nations are in extremely high tension and anything can set the other one off to fire first.  There are rumors about talks of peace, but it seems unlikely at this point.  Each side is hoping that somehow nuclear war can be prevented to save the millions of lives that it would cause...&#x000A;&#x000A;Turtle of Wrath&#x000A;An Interactive Fiction by Alex Ayerdi&#x000A;Release 1 / Serial number 150422 / Inform 7 build 6L38 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Desert&#x000A;You are a turtle, and you find yourself at the south edge of a road in the middle of a desert.  You hear a car coming from the east, and another coming from the west much farther away.&#x000A;&#x000A;You do not seem too interested in other things around you but you do see a cactus across the road that might offer shade and you see a little grape next to your foot. Type "help" to see a list of possible commands.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-0x027C4980"/>
+      <child nodeId="node-0x027F64D8"/>
+      <child nodeId="node-0x027D5790"/>
+      <child nodeId="node-0x027DB1C8"/>
+      <child nodeId="node-0x0280B5C8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027C4980">
+    <command xml:space="preserve">x road</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027CF168"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027CF168">
+    <command xml:space="preserve">help</command>
+    <result xml:space="preserve">You are a turtle, so you can really only move, eat, and hide in your shell.  Available commands are going in directions "go north" for example, eating things "eat berry" for example, and "hide."&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027CF2C0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027CF2C0">
+    <command xml:space="preserve">go east</command>
+    <result xml:space="preserve">You think about going east, but there is nothing of interest that way, so you decided not to move.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027CF418"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027CF418">
+    <command xml:space="preserve">go west</command>
+    <result xml:space="preserve">You think about going west, but there is nothing of interest that way, so you decided not to move.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027F6040"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027F6040">
+    <command xml:space="preserve">go south</command>
+    <result xml:space="preserve">You think about going south, but there is nothing of interest that way, so you decided not to move.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027F6310"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027F6310">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">road&#x000A;A long, narrow stretch with a smoothed or paved surface, made for traveling by motor vehicle, carriage, etc., between two or more points; street or highway.  It appears to be the only thing between you and the cactus.  You notice the air above the road appears to wiggle and wave.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027F6468"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027F6468">
+    <command xml:space="preserve">go east</command>
+    <result xml:space="preserve">You think about going east, but there is nothing of interest that way, so you decided not to move.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x027F64D8">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">CRUNCH!  You got ran over by a Jalopy carrying a ton of stuff on its hood.  Weird...  Well, you should have trusted your instincts and taken time to have a bite to eat.&#x000A;&#x000A;&#x000A;&#x000A;    *** The End ***&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027F6548"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027F6548">
+    <command xml:space="preserve">restart</command>
+    <result xml:space="preserve">Nuclear war is on the horizon, two nations are in extremely high tension and anything can set the other one off to fire first.  There are rumors about talks of peace, but it seems unlikely at this point.  Each side is hoping that somehow nuclear war can be prevented to save the millions of lives that it would cause...&#x000A;&#x000A;Turtle of Wrath&#x000A;An Interactive Fiction by Alex Ayerdi&#x000A;Release 1 / Serial number 150421 / Inform 7 build 6L38 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Desert&#x000A;You are a turtle, and you find yourself at the south edge of a road in the middle of a desert.  You hear a car coming from the east, and another coming from the west much farther away.&#x000A;&#x000A;You do not seem too interested in other things around you but you do see a cactus across the road that might offer shade and you see a little grape next to your foot. Type "help" to see a list of possible commands.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02809948"/>
+      <child nodeId="node-0x027D0B90"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02809948">
+    <command xml:space="preserve">eat berry</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02809B48"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02809B48">
+    <command xml:space="preserve">eat grape</command>
+    <result xml:space="preserve">You reach down with your turtle mouth and eat the grape.  Yum!  You watch innocently as a Jalopy packed full of people and random stuff on its hood drives by at turtle-crunching speed.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02809E88"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02809E88">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">Road&#x000A;A long, narrow stretch with a smoothed or paved surface, made for traveling by motor vehicle, carriage, etc., between two or more points; street or highway.  It appears to be the only thing between you and the cactus.  You notice the air above the road appears to wiggle and wave.&#x000A;&#x000A;You can still hear the second car coming from the west.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02809EF8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02809EF8">
+    <command xml:space="preserve">x road</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x027D0B90">
+    <command xml:space="preserve">go south</command>
+    <result xml:space="preserve">You think about going south, but there is nothing of interest that way, so you decided not to move.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D0880"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D0880">
+    <command xml:space="preserve">go east</command>
+    <result xml:space="preserve">You think about going east, but there is nothing of interest that way, so you decided not to move.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D0730"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D0730">
+    <command xml:space="preserve">go west</command>
+    <result xml:space="preserve">You think about going west, but there is nothing of interest that way, so you decided not to move.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D05E0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D05E0">
+    <command xml:space="preserve">eat grape</command>
+    <result xml:space="preserve">You reach down with your turtle mouth and eat the grape.  Yum!  You watch innocently as a Jalopy packed full of people and random stuff on its hood drives by at turtle-crunching speed.&#x000A;&#x000A;The second car is still quite far away, you might be able to make a break for it now across the road.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D0810"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D0810">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">Road&#x000A;A long, narrow stretch of a smoothed surface.  The air above the road wobbles from the heat.  It appears to be the only thing between you and the cactus.&#x000A;&#x000A;You can still hear the second car coming from the west, it is louder than before.  You are scared, and your instinct is to hide but you are also very hot and desperatley need that shade.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D06C0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D06C0">
+    <command xml:space="preserve">hide</command>
+    <result xml:space="preserve">You hide in your shell because the car scares you and you feel unable to proceed further.&#x000A;&#x000A;It then approaches you, but luckily it slows down and comes to a full stop.  The tall animal inside notices you and picks you up, placing you in the passenger seat.  You are absolutely frightened.&#x000A;&#x000A;"Poor little turtle.  I wonder what you're doing out here?  Hmm... well, I'm off to work.  Do you want to join me?"&#x000A;&#x000A;... You are turtle so you do not respond ...&#x000A;&#x000A;"I'm an engineer at the military base here, you can be my company while I update the lighting in the building."&#x000A;&#x000A;The engineer puts some snacks in front of the hole for your head and you peek out slowly.  You snatch it up as quickly as you can and then retreat back.  You like the food, so you slowly put your head back outside of your shell.  Maybe being with this tall thing that makes sounds will be beneficial.  You believe yourself to be a smart turtle.&#x000A;&#x000A;Engineer's Workshop&#x000A;A fantastic workshop filled with gadgets and doohickies.   You can see various sorts of power supplies, light sources, and wires come out of every which way.  However, you process none of this as important because you are a turtle.  Also, you remember that you're getting hungry again...  The tall animal has gone away, so you are confused.  Although... those wires look like little worms...  &#x000A;&#x000A;You also smell something nice coming from the east. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D0AB0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D0AB0">
+    <command xml:space="preserve">eat wires</command>
+    <result xml:space="preserve">*brrrsst* "Eeeek"&#x000A;&#x000A;You didn't like the taste of those worms, it made your mouth hurt and your body tingle.  Almost immediately following that, everything goes dark and it starts to get really loud with screaming tall animals.&#x000A;&#x000A;You start to get a little bit scared, but you still smell something really good from the east.  So that makes you forget about the darkness.&#x000A;&#x000A;You still hear the tall animals screaming and yelling in the dark.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D09D0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D09D0">
+    <command xml:space="preserve">go west</command>
+    <result xml:space="preserve">There is only a wall there, you see a little spider climbing up the wall.  You wish you could climb like the spider.&#x000A;&#x000A;You still hear the tall animals screaming and yelling in the dark.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D08F0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D08F0">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">You only see a crate and a shelf full of lighting equipment, wires, power sources, and everything else an engineer might need.  No where to go over there.&#x000A;&#x000A;You still hear the tall animals screaming and yelling in the dark.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D0960"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D0960">
+    <command xml:space="preserve">go east</command>
+    <result xml:space="preserve">Kitchen&#x000A;A heaven to you because you are enveloped by the smells of various different types of foods.  You are extremely curious as to what each of the foods are, and if you can eat them while avoiding those other tall and loud animals.&#x000A;&#x000A; You can smell only a piece of bread, a carrot, and some lettuce nearby.  Your little turtle-nose is strong enough to find it if you want to eat it.&#x000A;&#x000A;There is a large silhouette near the carrot.  &#x000A;&#x000A;You still hear the tall animals screaming and yelling in the dark.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D07A0"/>
+      <child nodeId="node-0x027D0A40"/>
+      <child nodeId="node-0x027D0D50"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D07A0">
+    <command xml:space="preserve">eat bread</command>
+    <result xml:space="preserve">You sniff intently and finally find the bread in the dark.  It tastes really good, but you aren't quite satisfied.  It's still dark, but some emergency lights illuminate the Control Room to the east.  Your second most favorite thing besides food is shiny lights, so you are curious and want to take a look.&#x000A;&#x000A;You still hear the tall animals screaming and yelling in the dark.&#x000A;"Someone get those lights back on!!  Find the breaker!"&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x027D0A40">
+    <command xml:space="preserve">eat carrot</command>
+    <result xml:space="preserve">You sniff intently and finally find the little carrot in the dark.  It tastes good, but you aren't quite satisfied.  As soon as you finish eating it, since it's dark the chef unknowningly trips on your shell and as he's falling his cleaver is thrown out of his hands.  The cleaver slices into the heart of someone in the dark...&#x000A;&#x000A;"Commander!!!"&#x000A;&#x000A;The Commander is instanly killed, but you don't really notice or care about any of this since you're a turtle.&#x000A;&#x000A;"We have a spy in our midst!!!  Find him immediately, our Commander is dead!!!"&#x000A;&#x000A;You still hear the tall animals screaming and yelling in the dark.&#x000A;"Someone get those lights back on!!  Find the breaker, and get that spy!!"&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x027D0D50">
+    <command xml:space="preserve">eat lettuce</command>
+    <result xml:space="preserve">You sniff intently and finally find the lettuce in the dark.  It tastes really good, but you aren't quite satisfied.  It's still dark, but some emergency lights illuminate the Control Room to the east.  Your second most favorite thing besides food is shiny lights, so you are curious and want to take a look.&#x000A;&#x000A;You still hear the tall animals screaming and yelling in the dark.&#x000A;"Someone get those lights back on!!  Find the breaker!!"&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D0B20"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D0B20">
+    <command xml:space="preserve">eat carrot</command>
+    <result xml:space="preserve">You cannot find it now, it must have been kicked away in the midst of everyone running around in the dark.&#x000A;&#x000A;You still hear the tall animals screaming and yelling in the dark.&#x000A;"Someone get those lights back on!!  Find the breaker, and get that spy!!"&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D0C00"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D0C00">
+    <command xml:space="preserve">go west</command>
+    <result xml:space="preserve">Engineer's Workshop&#x000A;A fantastic workshop filled with gadgets and doohickies.    Although, you cannot really see anything so you don't care much. &#x000A;&#x000A;&#x000A;&#x000A;You still hear the tall animals screaming and yelling in the dark.&#x000A;"Someone get those lights back on!!  Find the breaker!!"&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D0650"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D0650">
+    <command xml:space="preserve">go east</command>
+    <result xml:space="preserve">Kitchen&#x000A; You can't smell the food from before anymore.  You still see that interesting light coming from the east though.&#x000A;&#x000A; &#x000A;&#x000A;You still hear the tall animals screaming and yelling in the dark.&#x000A;"Someone get those lights back on!!  Find the breaker!!"&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D0C70"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D0C70">
+    <command xml:space="preserve">go east</command>
+    <result xml:space="preserve">Control Room&#x000A;You can see a President Switch, an Enemy Switch, and a Missle Button on the north-wall console in front of you.  To the east is the Closet.&#x000A;&#x000A;The buttons and switches are all out of reach... but you have an urge to reach up and try to get them anyway.  You're a turtle, you don't know any better.&#x000A;&#x000A;Someone figures out just in time where the breaker is and gets the emergency lights on, meanwhile, the engineer fixes the wires that caused the light outage. Then the control room guard sees you...&#x000A;&#x000A;&#x000A;"What, what?  What are you doing here little one?  Is that a piece of lettuce in your mouth?  Aww, well I have some extra lettuce for you up here on the console."&#x000A;&#x000A;You are lifted onto the console with all the buttons.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D0CE0"/>
+      <child nodeId="node-0x027D63D0"/>
+      <child nodeId="node-0x027D5870"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D0CE0">
+    <command xml:space="preserve">x president</command>
+    <result xml:space="preserve">It is a little green button, it looks so shiny and tasty to you.  Maybe if you just took a little nibble...&#x000A;&#x000A;You still hear the tall animals screaming and yelling in the dark.&#x000A;"Someone get those lights back on!!  Find the breaker!!"&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x027D63D0">
+    <command xml:space="preserve">showme height-counter</command>
+    <result xml:space="preserve">There seems to be no such object anywhere in the model world.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D60C0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D60C0">
+    <command xml:space="preserve">test height-counter</command>
+    <result xml:space="preserve">&gt;--&gt; No test scripts exist for this game.&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D6360"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D6360">
+    <command xml:space="preserve">height-counter</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x027D5870">
+    <command xml:space="preserve">x enemy</command>
+    <result xml:space="preserve">It is a little orange button, you remember how good Oranges taste and that sort of makes you hungry again.  Maybe if you just took a little nibble...&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D5E90"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D5E90">
+    <command xml:space="preserve">x missle</command>
+    <result xml:space="preserve">It is a large red button that looks a lot like a cherry, but your turtle brain cannot process that since you don't remember ever having had that sort of food before.  It does look shiny and delicious though.  Maybe if you just took a little nibble...&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D6050"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D6050">
+    <command xml:space="preserve">x closet</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D6210"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D6210">
+    <command xml:space="preserve">go east</command>
+    <result xml:space="preserve">You cannot since you are too high up and falling down would kill you.  Your little turtle instincts remind you to not walk off of tall places.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D61A0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D61A0">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">There is only a bunch of lit up screens and diodes in front of you; you cannot go anywhere...&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D6280"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D6280">
+    <command xml:space="preserve">eat missle</command>
+    <result xml:space="preserve">"Nuclear missle armed and firing!"  You love the taste of the button, but are unsure as to why you cannot bite into it...&#x000A;&#x000A;The odd timing of the nuclear strike causes the enemy to be caught off guard and you destroy the whole country with a barrage of missles.  The enemy is surely defeated and you saved millions of your own country's lives.&#x000A;&#x000A;You feel disatisfied and fall asleep on the console.&#x000A;&#x000A;&#x000A;&#x000A;    *** The End ***&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x027D5790">
+    <command xml:space="preserve">eat berry</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D5800"/>
+      <child nodeId="node-0x027D5640"/>
+      <child nodeId="node-0x027D5950"/>
+      <child nodeId="node-0x027D6130"/>
+      <child nodeId="node-0x027D5BF0"/>
+      <child nodeId="node-0x027D5D40"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D5800">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Desert&#x000A;You are a turtle, and you find yourself at the edge of a road in the middle of a desert.  You hear a car coming from the east.  You do not seem too interested in other things around you but you do see a cactus across the road that might offer shade and a little berry next to your foot. Type "help" to see a list of possible commands.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D62F0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D62F0">
+    <command xml:space="preserve">x berry</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x027D5640">
+    <command xml:space="preserve">showme</command>
+    <result xml:space="preserve">Desert - room&#x000A;    yourself - person&#x000A;        shell - open container&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D58E0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D58E0">
+    <command xml:space="preserve">x berry</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x027D5950">
+    <command xml:space="preserve">eat</command>
+    <result xml:space="preserve">You must supply a noun.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D59C0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D59C0">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">Road&#x000A;A long, narrow stretch with a smoothed or paved surface, made for traveling by motor vehicle, carriage, etc., between two or more points; street or highway.  It appears to be the only thing between you and the cactus.  You notice the air above the road appears to wiggle and wave.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D56B0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D56B0">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">Cactus&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D5720"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D5720">
+    <command xml:space="preserve">x shell</command>
+    <result xml:space="preserve">Your trusty shell that you use for hiding, storage, and protection.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x027D6130">
+    <command xml:space="preserve">go nortth</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D5A30"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D5A30">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">Road&#x000A;A long, narrow stretch with a smoothed or paved surface, made for traveling by motor vehicle, carriage, etc., between two or more points; street or highway.  It appears to be the only thing between you and the cactus.  You notice the air above the road appears to wiggle and wave.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D5B10"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D5B10">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">stop.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D5AA0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D5AA0">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D5B80"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D5B80">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Cactus&#x000A;A tall and spikey plant that really means nothing to you other than that it offers your sought after shade for this hot day in the desert.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x027D5BF0">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">Road&#x000A;A long, narrow stretch with a smoothed or paved surface, made for traveling by motor vehicle, carriage, etc., between two or more points; street or highway.  It appears to be the only thing between you and the cactus.  You notice the air above the road appears to wiggle and wave.&#x000A;&#x000A;You can still hear the second car coming from the west.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D5C60"/>
+      <child nodeId="node-0x027D5CD0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D5C60">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">You get into the shade of the cactus which feels nice.  However, the ground under you starts to slip under your feet and you move closer to the edge of the cactus.&#x000A;&#x000A;Control Room&#x000A;"weight trigger activated .... trap activated!"&#x000A;&#x000A;The guard looks at the camera and sees nothing but a turtle.&#x000A;&#x000A;"dumb turtle"&#x000A;&#x000A;The guard then resets the weight trigger and trap by pressing a button on his console.  At this point though, the turtle has already fallen through a small door where the trap was located at the cactus" trunk, but the guard takes zero notice because he has already fallen asleep.&#x000A;&#x000A;Cactus Trap&#x000A;A trap used to kill spies getting too close to the base.  The cactus was clearly fake and is actually a power unit for the trap itself.  The inside here is actually quite dull and uninteresting other than the ventilation shaft to the north.&#x000A;&#x000A;You can see a bolt here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x027D5CD0">
+    <command xml:space="preserve">hide</command>
+    <result xml:space="preserve">You hide in your shell because the car scares you and you feel unable to proceed further.&#x000A;&#x000A;The car approaches you and stops.  It notices you as a poor turtle and picks you up, placing you in the passenger seat.&#x000A;&#x000A;"Poor little turtle.  I wonder what you're doing out here?"&#x000A;&#x000A;"Well, I'm off to work, do you want to join me?"&#x000A;&#x000A;... You are turtle so you do not respond ...&#x000A;&#x000A;"I'm an engineer at the military base here, you can be my company while I update the lighting in the building."&#x000A;&#x000A;"The engineer feeds you some snacks and you feel satisfied.  Maybe being with this tall thing that makes sounds will be beneficial.  You believe yourself to be a smart turtle."&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x027D5D40">
+    <command xml:space="preserve">eat grape</command>
+    <result xml:space="preserve">You reach down with your turtle mouth and eat the grape.  Yum!  You watch innocently as a Jalopy packed full of people and random stuff on its hood drives by at turtle-crunching speed.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D5DB0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D5DB0">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">Road&#x000A;A long, narrow stretch with a smoothed or paved surface, made for traveling by motor vehicle, carriage, etc., between two or more points; street or highway.  It appears to be the only thing between you and the cactus.  You notice the air above the road appears to wiggle and wave.&#x000A;&#x000A;You can still hear the second car coming from the west.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D5F00"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D5F00">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">You get into the shade of the cactus which feels nice.  However, the ground under you starts to slip under your feet and you move closer to the edge of the cactus.&#x000A;&#x000A;The Control Room&#x000A;You can see a President Switch, an Enemy Switch and a Missle Button here.&#x000A;&#x000A;"weight trigger activated .... trap powering up!"&#x000A;&#x000A;The guard awakens to the warning from the computer and looks at the camera but sees nothing but a turtle.&#x000A;&#x000A;"dumb turtle..."&#x000A;&#x000A;The guard then resets the weight trigger and trap by pressing a button on his console.  At this point though, the turtle has already fallen through a small door where the trap was located at the cactus" trunk, but the guard takes zero notice because he has already fallen back asleep.&#x000A;&#x000A;Cactus Trap&#x000A;A trap used to kill spies getting too close to the base.  The cactus was clearly fake and is actually a power unit for the trap itself.  The inside here is actually quite dull and uninteresting other than the ventilation shaft to the north.  The shaft is cut off by a grate, but the grate has since loosened, and you can see the bolts are practically hanging off.   The bolts look sort of like little lizards to you, and that makes you hungry.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D5F70"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D5F70">
+    <command xml:space="preserve">eat bolts</command>
+    <result xml:space="preserve">You eat the bolt, it's um... not so bad.  You're not sure since you're a turtle.  However, the consequence is that the grate slides down and the entrance to the Ventilation Shaft is open!  You feel an urge to go through, but you're a little bit scared.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D5FE0"/>
+      <child nodeId="node-0x027DB5B8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D5FE0">
+    <command xml:space="preserve">go norht</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D6440"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D6440">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">You cannot go through the grate, but unfortunately you're unable to process that information intelligently, because you're a turtle and simply run into the grate hitting your head.  You feel a small amount of pain, but you're okay.  You're also still pretty hungry, those bolts look yummy.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D64B0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D64B0">
+    <command xml:space="preserve">showme</command>
+    <result xml:space="preserve">Cactus Trap - room&#x000A;    yourself - person&#x000A;        shell - open container&#x000A;    bolt&#x000A;    grate&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027D6590"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027D6590">
+    <command xml:space="preserve">x bolts</command>
+    <result xml:space="preserve">You see nothing special about the bolt.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DB078"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DB078">
+    <command xml:space="preserve">x bolt</command>
+    <result xml:space="preserve">You see nothing special about the bolt.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x027DB5B8">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">Ventilation Shaft&#x000A;A ventilation shaft used to cool down the trap because it can heat up easily from its power usage and being covered under sand.  It's pretty hot in here and you feel like sleeping, but you also want to move on and possibly find food.  There only seems to be one direction to go for now.&#x000A;&#x000A;Although, the bottom of the ventilation shaft seems very weak and worn out.  It probably won't break if you only spend time on it for a few seconds.&#x000A;&#x000A;You would have to get out of the Ventilation Shaft first.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DB0E8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DB0E8">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">T-Junction&#x000A;The end of the main ventilation shaft, in front of you is a massive fan, likely dangerous, and to the left and right of you are further shafts but they drop downwards into unknown rooms.  The west side of the T-Junction smells like food, but the east side of the T-Junction has a bright light.&#x000A;&#x000A;You think lights are pretty cool, because you're a turtle.  But then again, you're getting hungry and the food seems instinctively good.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DAEB8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DAEB8">
+    <command xml:space="preserve">go west</command>
+    <result xml:space="preserve">You fall down the west side of the T-Junction!  Plop...  You are unhurt and a little frazzled, but you are a turtle and have no idea what just happened.  You are only concerned about the food you smell.&#x000A;&#x000A;Kitchen&#x000A;A heaven to you because you are enveloped in the smells, sounds, and sights of various different types of foods.  You are extremely curious as to what each of the foods are, and if you can eat them while avoiding those other tall and loud animals.&#x000A;&#x000A;Upon first glance you notice a nice piece of bread near the foot of a tall and loud animal.  You also see a grape behind the counter of the tall and loud animal who makes the food.  Lastly the only other turtle-able food you see is a piece of lettuce which is curiously by the same engineer person from before.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DAF98"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DAF98">
+    <command xml:space="preserve">go east</command>
+    <result xml:space="preserve">The Control Room&#x000A;You can see a President Switch, an Enemy Switch and a Missle Button here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DB3F8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DB3F8">
+    <command xml:space="preserve">eat president switch</command>
+    <result xml:space="preserve">You reach up with your tiny turtle mouth, but the console is too high for you.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x027DB1C8">
+    <command xml:space="preserve">help</command>
+    <result xml:space="preserve">You are a turtle, so you can really only move, eat, and hide in your shell.  When you want to move to another area, use cardinal directions such as "go north" (or "n" ,"s", "w", "e" as shortcuts).&#x000A;&#x000A;If you want to eat something type "eat &lt;something&gt;" and for this game it might not always be food as you know it.  Hiding is simply done by "hide" which could have a various number of different effects depending on the situation ("hide", "turtle", and "sleep" are all essentially the same action in this game).&#x000A;&#x000A;Don't forget that you can still use "examine &lt;thing&gt;" as well to see descriptions!  The shortcut "x &lt;thing&gt;" works too. If you want to see the description of the current location, type "look"&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DB858"/>
+      <child nodeId="node-0x027DB388"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DB858">
+    <command xml:space="preserve">hide</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DAD68"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DAD68">
+    <command xml:space="preserve">eat berry</command>
+    <result xml:space="preserve">(first taking the berry)&#x000A;You reach down with your turtle mouth and eat the berry.  Yum!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DAC88"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DAC88">
+    <command xml:space="preserve">eat berry</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DAF28"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DAF28">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Desert&#x000A;You are a turtle, and you find yourself at the edge of a road in the middle of a desert.  You hear a car coming from the east.  You do not seem too interested in other things around you but you do see a cactus across the road that might offer shade and a little berry next to your foot. Type "help" to see a list of possible commands.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DAE48"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DAE48">
+    <command xml:space="preserve">eat berry</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DB318"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DB318">
+    <command xml:space="preserve">go east</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DB628"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DB628">
+    <command xml:space="preserve">go west</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DB2A8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DB2A8">
+    <command xml:space="preserve">go south</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DB008"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DB008">
+    <command xml:space="preserve">cross road</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DB7E8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DB7E8">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">Road&#x000A;A long, narrow stretch with a smoothed or paved surface, made for traveling by motor vehicle, carriage, etc., between two or more points; street or highway.  It appears to be the only thing between you and the cactus.  You notice the air above the road appears to wiggle and wave.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DB9A8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DB9A8">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">Cactus&#x000A;A tall and spikey plant that really means nothing to you other than that it offers your sought after shade for this hot day in the desert.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x027DB388">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">CRUNCH!  You got ran over by a Jalopy carrying a ton of stuff on its hood.  Weird...  Well, you should have trusted your instincts and taken time to have a bite to eat.&#x000A;&#x000A;&#x000A;&#x000A;    *** The End ***&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DB238"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DB238">
+    <command xml:space="preserve">restart</command>
+    <result xml:space="preserve">Nuclear war is on the horizon, two nations are in extremely high tension and anything can set the other one off to fire first.  There are rumors about talks of peace, but it seems unlikely at this point.  Each side is hoping that some how nuclear war can be prevented to save the millions of lives that it would cause...&#x000A;&#x000A;Turtle of Wrath&#x000A;An Interactive Fiction by Alex Ayerdi&#x000A;Release 1 / Serial number 150418 / Inform 7 build 6L38 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Desert&#x000A;You are a turtle, and you find yourself at the south edge of a road in the middle of a desert.  You hear a car coming from the east, and another coming from the west much farther away.&#x000A;&#x000A;You do not seem too interested in other things around you but you do see a cactus across the road that might offer shade and you see a little grape next to your foot. Type "help" to see a list of possible commands.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DAC18"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DAC18">
+    <command xml:space="preserve">eat grape</command>
+    <result xml:space="preserve">You reach down with your turtle mouth and eat the grape.  Yum!  You watch innocently as a Jalopy packed full of people and random stuff on its hood drives by at turtle-crunching speed.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DADD8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DADD8">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">Road&#x000A;A long, narrow stretch with a smoothed or paved surface, made for traveling by motor vehicle, carriage, etc., between two or more points; street or highway.  It appears to be the only thing between you and the cactus.  You notice the air above the road appears to wiggle and wave.&#x000A;&#x000A;You can still hear the second car coming from the west.  You are scared, and your instinct is to hide but you are also very hot and desperatley need that shade.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DB698"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DB698">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">You get into the shade of the cactus which feels nice.  However, the ground under you starts to slip under your feet and you move closer to the edge of the cactus.&#x000A;&#x000A;Control Room&#x000A;You can see a President Switch, an Enemy Switch, and a Missle Button here.  To the east is the Closet.&#x000A;&#x000A;"weight trigger activated .... trap powering up!"&#x000A;&#x000A;The guard awakens to the warning from the computer and looks at the camera but sees nothing but a turtle.&#x000A;&#x000A;"dumb turtle..."&#x000A;&#x000A;The guard then resets the weight trigger and trap by pressing a button on his console.  At this point though, the turtle has already fallen through a small door where the trap was located at the cactus trunk, but the guard takes zero notice because he has already fallen back asleep.&#x000A;&#x000A;Cactus Trap&#x000A;A trap used to kill spies getting too close to the base.  The cactus was clearly fake and is actually a power unit for the trap itself.  The inside here is actually quite dull and uninteresting other than the ventilation shaft to the north.  The shaft is cut off by a grate, but the grate has since loosened, and you can see the bolts are practically hanging off.&#x000A;&#x000A;The bolts look sort of like little lizards to you, and that makes you hungry.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DB468"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DB468">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">You cannot go through the grate, but unfortunately you're unable to process that information intelligently because you're a turtle and simply run into the grate hitting your head.  You feel a small amount of pain, but you're okay.  You're also still pretty hungry; those bolts look tasty.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DB8C8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DB8C8">
+    <command xml:space="preserve">x bolts</command>
+    <result xml:space="preserve">The little lizard-looking bolts are quite old by now, they are barely holding the grate on the Ventilation Shaft in front of you.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DB4D8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DB4D8">
+    <command xml:space="preserve">x cactus</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DB548"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DB548">
+    <command xml:space="preserve">x cactus trap</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DB708"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DB708">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Cactus Trap&#x000A;A trap used to kill spies getting too close to the base.  The cactus was clearly fake and is actually a power unit for the trap itself.  The inside here is actually quite dull and uninteresting other than the ventilation shaft to the north.  The shaft is cut off by a grate, but the grate has since loosened, and you can see the bolts are practically hanging off.&#x000A;&#x000A;The bolts look sort of like little lizards to you, and that makes you hungry.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DB778"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DB778">
+    <command xml:space="preserve">eat bolts</command>
+    <result xml:space="preserve">You eat the bolts, they're um... not so bad.  You're not sure since you're a turtle.  However, the grate slides down and the entrance to the Ventilation Shaft is open!  You feel an urge to go through, but you're a little bit scared.  It seems to stretch on forever, dimly lit, and there is a steady flow of air rushing towards you.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DACF8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DACF8">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">Ventilation Shaft&#x000A;A ventilation shaft used to cool down the trap because it can heat up easily from its power usage and being covered under sand.  It's pretty hot in here and you feel like sleeping, but you also want to move on and possibly find food.  There only seems to be one direction to go for now.&#x000A;&#x000A;Although the bottom of the ventilation shaft seems very weak and worn out, it probably won't break if you only spend time on it for a few seconds.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DB938"/>
+      <child nodeId="node-0x027DBA88"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DB938">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">T-Junction&#x000A;The end of the main ventilation shaft, in front of you is a massive fan, likely dangerous, and to the left and right of you are further shafts but they drop downwards into unknown rooms.  The west side of the T-Junction smells like food, but the east side of the T-Junction has a bright light.&#x000A;&#x000A;You think lights are pretty cool, because you're a turtle.  But then again, you're getting hungry and the food seems instinctively good.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DBAF8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DBAF8">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">You were oddly enticed to go into the fast moving blade at the T-Junction.  As soon as you touch the blade you are swep into it and are completely ripped apart to shreds.  You live...just kidding, you died a very swift death.&#x000A;&#x000A;&#x000A;&#x000A;    *** The End ***&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x027DBB68"/>
+      <child nodeId="node-0x027DBA18"/>
+    </children>
+  </item>
+  <item nodeId="node-0x027DBB68">
+    <command xml:space="preserve">restart</command>
+    <result xml:space="preserve">Nuclear war is on the horizon, two nations are in extremely high tension and anything can set the other one off to fire first.  There are rumors about talks of peace, but it seems unlikely at this point.  Each side is hoping that some how nuclear war can be prevented to save the millions of lives that it would cause...&#x000A;&#x000A;Turtle of Wrath&#x000A;An Interactive Fiction by Alex Ayerdi&#x000A;Release 1 / Serial number 150418 / Inform 7 build 6L38 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Desert&#x000A;You are a turtle, and you find yourself at the south edge of a road in the middle of a desert.  You hear a car coming from the east, and another coming from the west much farther away.&#x000A;&#x000A;You do not seem too interested in other things around you but you do see a cactus across the road that might offer shade and you see a little grape next to your foot. Type "help" to see a list of possible commands.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x027DBA18">
+    <command xml:space="preserve">undo</command>
+    <result xml:space="preserve">T-Junction&#x000A;[Previous turn undone.]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x027DBA88">
+    <command xml:space="preserve">go west</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x0280B5C8">
+    <command xml:space="preserve">eat grape</command>
+    <result xml:space="preserve">You reach down with your turtle mouth and eat the grape.  Yum!  You watch innocently as a Jalopy packed full of people and random stuff on its hood drives by at turtle-crunching speed.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-0x0280B4E8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0280B4E8">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">Road&#x000A;A long, narrow stretch with a smoothed or paved surface, made for traveling by motor vehicle, carriage, etc., between two or more points; street or highway.  It appears to be the only thing between you and the cactus.  You notice the air above the road appears to wiggle and wave.&#x000A;&#x000A;You can still hear the second car coming from the west.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-0x0280B558"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0280B558">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">You get into the shade of the cactus which feels nice.  However, the ground under you starts to slip under your feet and you move closer to the edge of the cactus.&#x000A;&#x000A;The Control Room&#x000A;You can see a President Switch, an Enemy Switch and a Missle Button here.&#x000A;&#x000A;"weight trigger activated .... trap powering up!"&#x000A;&#x000A;The guard awakens to the warning from the computer and looks at the camera but sees nothing but a turtle.&#x000A;&#x000A;"dumb turtle..."&#x000A;&#x000A;The guard then resets the weight trigger and trap by pressing a button on his console.  At this point though, the turtle has already fallen through a small door where the trap was located at the cactus" trunk, but the guard takes zero notice because he has already fallen back asleep.&#x000A;&#x000A;Cactus Trap&#x000A;A trap used to kill spies getting too close to the base.  The cactus was clearly fake and is actually a power unit for the trap itself.  The inside here is actually quite dull and uninteresting other than the ventilation shaft to the north.  The shaft is cut off by a grate, but the grate has since loosened, and you can see the bolts are practically hanging off.&#x000A;&#x000A;The bolts look sort of like little lizards to you, and that makes you hungry.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-0x0280B478"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0280B478">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">You cannot go through the grate, but unfortunately you're unable to process that information intelligently, because you're a turtle and simply run into the grate hitting your head.  You feel a small amount of pain, but you're okay.  You're also still pretty hungry, those bolts look yummy.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-0x0280AB48"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0280AB48">
+    <command xml:space="preserve">go west</command>
+    <result xml:space="preserve">For some reason you try to go west inside of the Cactus Trap, but you hit your tiny little head against the wall.  Unfortunately, your dreams of being a ninja turtle have not come true at this moment and you do not scale the wall.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-0x0280A918"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0280A918">
+    <command xml:space="preserve">eat grate</command>
+    <result xml:space="preserve">That's plainly inedible.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-0x0280B088"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0280B088">
+    <command xml:space="preserve">eat cactus trap</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-0x0280ABB8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0280ABB8">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Cactus Trap&#x000A;A trap used to kill spies getting too close to the base.  The cactus was clearly fake and is actually a power unit for the trap itself.  The inside here is actually quite dull and uninteresting other than the ventilation shaft to the north.  The shaft is cut off by a grate, but the grate has since loosened, and you can see the bolts are practically hanging off.&#x000A;&#x000A;The bolts look sort of like little lizards to you, and that makes you hungry.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-0x0280A8A8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0280A8A8">
+    <command xml:space="preserve">eat bolts</command>
+    <result xml:space="preserve">You eat the bolt, it's um... not so bad.  You're not sure since you're a turtle.  However, the consequence is that the grate slides down and the entrance to the Ventilation Shaft is open!  You feel an urge to go through, but you're a little bit scared.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-0x0280A6E8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0280A6E8">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">Ventilation Shaft&#x000A;A ventilation shaft used to cool down the trap because it can heat up easily from its power usage and being covered under sand.  It's pretty hot in here and you feel like sleeping, but you also want to move on and possibly find food.  There only seems to be one direction to go for now.&#x000A;&#x000A;Although, the bottom of the ventilation shaft seems very weak and worn out.  It probably won't break if you only spend time on it for a few seconds.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-0x0280A988"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0280A988">
+    <command xml:space="preserve">hide</command>
+    <result xml:space="preserve">The continuous weight of you just sitting there sleeping causes the weak under part of the ventilation shaft to screech and break underneath you!  You feel your little turtle-stomach flip over a few times before you hit the ground with your shell.&#x000A;&#x000A;You seem to have landed in some sort of dark room.&#x000A;&#x000A;Closet&#x000A;The closet is a dark place and it has mops, buckets, various cleaning equipment, and tools.  These are of no interest to you because you are a turtle.  You are however interested in getting out, the door seems to be cracked open enough for you to escape.  On the other hand, you are still pretty sleepy from not eating in a while and from the hot air.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-0x0280AF38"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0280AF38">
+    <command xml:space="preserve">showme hiding-counter</command>
+    <result xml:space="preserve">There seems to be no such object anywhere in the model world.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-0x0280AAD8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0280AAD8">
+    <command xml:space="preserve">showme grape</command>
+    <result xml:space="preserve">grape - thing&#x000A;location: in the Desert&#x000A;singular-named, improper-named; unlit, edible, portable; eaten&#x000A;list grouping key: none&#x000A;printed name: "grape"&#x000A;printed plural name: none&#x000A;indefinite article: none&#x000A;description: "A little red grape that looks like it was recently picked, perhaps arriving here after falling off of a truck."&#x000A;initial appearance: none&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-0x0280AC28"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0280AC28">
+    <command xml:space="preserve">go west</command>
+    <result xml:space="preserve">"Hmm, what was that...  I thought I heard something.  Eh, probably nothing, I have been eating way too many of those tacos...  It must be making me hallucinate now."&#x000A;&#x000A;You sneak past the control room guard, but you don't actually realize you're doing this...  &#x000A;The Control Room&#x000A;You can see a President Switch, an Enemy Switch and a Missle Button here.&#x000A;&#x000A;You can smell something good from the west.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-0x0280ADE8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0280ADE8">
+    <command xml:space="preserve">go west</command>
+    <result xml:space="preserve">Kitchen&#x000A;A heaven to you because you are enveloped in the smells, sounds, and sights of various different types of foods.  You are extremely curious as to what each of the foods are, and if you can eat them while avoiding those other tall and loud animals.&#x000A;&#x000A; Upon first glance you notice a nice piece of bread near the foot of a tall and loud animal.  You also see a carrot behind the counter of the tall and loud animal who makes the food.  Lastly the only other turtle-able food you see is a piece of lettuce which is curiously by the same engineer person from before. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-0x0280AD08"/>
+    </children>
+  </item>
+  <item nodeId="node-0x0280AD08">
+    <command xml:space="preserve">go east</command>
+    <result xml:space="preserve">The Control Room&#x000A;You can see a President Switch, an Enemy Switch and a Missle Button here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+  </item>
+</Skein>
