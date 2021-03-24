@@ -4,22 +4,18 @@ const _ = require('lodash');
 function solveSudokus() {
     const data = fs.readFileSync('sudoku.txt', 'utf-8');
 
-    const lines = data.split('\r\n');
-    let grid = [];
+    const gridBlocks = data.split(/grid.*\r\n/gi);
+    gridBlocks.shift(); // remove the empty first item
     let totalValue = 0;
-    for (const line of lines) {
-        if (line.toLowerCase().includes('grid')) { // this silly way does require an extra "grid" at the bottom
-            if (grid.length) {
-                const possibleMatrix = createPossibleValueMatrix(grid);
-                const solution = solveSudoku(grid, possibleMatrix);
-                totalValue += Number(solution[0][0] + solution[0][1] + solution[0][2]);
-                // printSolution(solution);
-            }
-            grid = [];
-            // console.log(line);
-        } else {
+    for (const gridBlock of gridBlocks) {
+        let grid = [];
+        for (let line of gridBlock.split('\r\n')) {
             grid.push(line.split(''));
         }
+        const possibleMatrix = createPossibleValueMatrix(grid);
+        const solution = solveSudoku(grid, possibleMatrix);
+        totalValue += Number(solution[0][0] + solution[0][1] + solution[0][2]);
+        // printSolution(solution);
     }
 
     console.log(totalValue);
@@ -86,7 +82,8 @@ function unsetPossibleRowValues(possibleMatrix, row, val) {
             if (index >= 0) {
                 possibleMatrix[`${row}${col}`].splice(index, 1);
 
-                // this means we're double entered
+                // this means we inserted a value that doesn't let an empty space
+                // at this location have any possible values, we have to recurse upwards
                 if (!possibleMatrix[`${row}${col}`].length) {
                     return false;
                 }
@@ -104,7 +101,8 @@ function unsetPossibleColValues(possibleMatrix, col, val) {
             if (index >= 0) {
                 possibleMatrix[`${row}${col}`].splice(index, 1);
 
-                // this means we're double entered
+                // this means we inserted a value that doesn't let an empty space
+                // at this location have any possible values, we have to recurse upwards
                 if (!possibleMatrix[`${row}${col}`].length) {
                     return false;
                 }
@@ -126,7 +124,8 @@ function unsetPossibleBlockValues(possibleMatrix, row, col, val) {
                 if (index >= 0) {
                     possibleMatrix[`${rowBlock}${colBlock}`].splice(index, 1);
 
-                    // this means we're double entered
+                    // this means we inserted a value that doesn't let an empty space
+                    // at this location have any possible values, we have to recurse upwards
                     if (!possibleMatrix[`${rowBlock}${colBlock}`].length) {
                         return false;
                     }
@@ -144,11 +143,11 @@ function solveSudoku(grid, possibleMatrix, valIndex, valRow, valCol) {
         possibleMatrix[`${valRow}${valCol}`] = [];
         grid[valRow][valCol] = val;
 
-        // update row, col, block
+        // update row, col, block after we inserted our value
         if (!unsetPossibleRowValues(possibleMatrix, valRow, val) ||
             !unsetPossibleColValues(possibleMatrix, valCol, val) ||
             !unsetPossibleBlockValues(possibleMatrix, valRow, valCol, val)) {
-            // if we failed somewhere, recurse back up
+            // if we hit a sudoku roadblock, recurse back up
             return false;
         }
     }
@@ -160,11 +159,10 @@ function solveSudoku(grid, possibleMatrix, valIndex, valRow, valCol) {
             const possibleValues = possibleMatrix[emptyCell];
             if (possibleValues.length === check) {
                 for (let index = 0; index < check; index++) {
-                    // insert into grid
                     const row = Number(emptyCell[0]);
                     const col = Number(emptyCell[1]);
 
-                    // then recurse to solve further
+                    // insert our possible value
                     const solution = solveSudoku(_.cloneDeep(grid), _.cloneDeep(possibleMatrix), index, row, col);
                     // only return viable solutions, otherwise, try the next value
                     if (solution) {
