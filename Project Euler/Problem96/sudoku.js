@@ -2,7 +2,7 @@ const fs = require('fs');
 const _ = require('lodash');
 
 function solveSudokus() {
-    const data = fs.readFileSync('sudoku.txt', 'utf-8');
+    const data = fs.readFileSync('sudoku2.txt', 'utf-8');
 
     const gridBlocks = data.split(/grid.*\r\n/gi);
     gridBlocks.shift(); // remove the empty first item
@@ -15,7 +15,7 @@ function solveSudokus() {
         const possibleMatrix = createPossibleValueMatrix(grid);
         const solution = solveSudoku(grid, possibleMatrix);
         totalValue += Number(solution[0][0] + solution[0][1] + solution[0][2]);
-        // printSolution(solution);
+        printSolution(solution);
     }
 
     console.log(totalValue);
